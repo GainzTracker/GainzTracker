@@ -6,16 +6,32 @@
 //
 
 import UIKit
+import ParseSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        // Initialize Parse SDK
+        initializeParse()
+
         return true
     }
+
+    public func initializeParse(customObjectId: Bool = false) {
+        let applicationId = "hHekp8bi1Chh1zQ7aD4khsUWin41oTbD0jROQ5AT"
+        let clientKey = "7vKPrZ4GVJ87oJq0E9UnyCYMvg0K0hzI2cJctpOG"
+        let serverURL = URL(string: "https://parseapi.back4app.com/")!
+
+        ParseSwift.initialize(applicationId: applicationId,
+                              clientKey: clientKey,
+                              serverURL: serverURL,
+                              allowingCustomObjectIds: customObjectId,
+                              usingEqualQueryConstraint: false,
+                              usingDataProtectionKeychain: false)
+    }
+
 
     // MARK: UISceneSession Lifecycle
 
@@ -30,7 +46,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
 
