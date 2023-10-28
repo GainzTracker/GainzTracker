@@ -7,99 +7,43 @@
 
 import UIKit
 
-struct WorkoutResponse: Decodable {
-    let from: Int
-    let to: Int
-    let count: Int
-    let _links: Links
-    let hits: [Hit]
+enum MealType: String, Decodable {
+    case breakfast = "breakfast"
+    case brunch = "brunch"
+    case lunchDinner = "lunch/dinner"
+    case snack = "snack"
+    case teatime = "teatime"
+}
+struct ImageSize {
+    static let regular = CGSize(width: 300, height: 300)
+}
+struct RecipeSearchResponse: Decodable {
+    let hits: [RecipeHit]
 }
 
-struct Links: Decodable {
-    let `self`: Link
-    let next: Link
+struct RecipeHit: Decodable {
+    let recipe: RecipeDetail
 }
 
-struct Link: Decodable {
-    let href: String
-    let title: String
-}
-
-struct Hit: Decodable {
-    let workout: Workout
-}
-
-struct Workout: Decodable {
-    let uri: String
+struct RecipeDetail: Decodable {
     let label: String
-    let image: String
-    let images: ImageTypes
-    let source: String
-    let url: String
-    let shareAs: String
-    let yield: Double
-    let exerciseLabels: [String]
-    let equipmentLabels: [String]
-    let cautions: [String]
-    let exerciseSteps: [String]
-    let exercises: [Exercise]
-    let duration: Double
-    let difficultyIndex: Int
-    let totalCaloriesBurned: Double
-    let muscleGroups: [String]
-    let workoutType: [String]
-    let tags: [String]
-    let externalId: String
-    let nutrientsGained: [String: NutrientInfo]
-    let dailyNutrientsGained: [String: NutrientInfo]
-    let digest: [Digest]
+    let mealType: MealType
+    let image: URL
+    let ingredientLines: [String]?
 }
-
-struct ImageTypes: Decodable {
-    let THUMBNAIL: ImageDetail
-    let SMALL: ImageDetail
-    let REGULAR: ImageDetail
-    let LARGE: ImageDetail
-}
-
-struct ImageDetail: Decodable {
-    let url: String
-    let width: Int
-    let height: Int
-}
-
-struct Exercise: Decodable {
-    let text: String
-    let duration: Double
-    let equipment: String
-    let muscleGroup: String
-    let repetitions: Int
-    let exerciseId: String
-}
-
-struct NutrientInfo: Decodable {
-    let label: String
-    let quantity: Double
-    let unit: String
-}
-
-struct Digest: Decodable {
-    let label: String
-    let tag: String
-    let schemaOrgTag: String
-    let total: Double
-    let hasRDI: Bool
-    let daily: Double
-    let unit: String
-    let sub: [String: NutrientInfo] // Assuming it's a dictionary
-}
-
-if let safeData = data {
-    do {
-        let decoder = JSONDecoder()
-        let workoutsResponse = try decoder.decode(WorkoutResponse.self, from: safeData)
-        print(workoutsResponse)
-    } catch {
-        print("Error decoding data: \(error)")
+class RecipeAPIService {
+    
+    func fetchRecipes(searchTerm: String? = nil, completion: @escaping ([RecipeDetail]) -> Void) {
+        var url = URL(string: "https://api.edamam.com/api/recipes/v2?type=public&app_id=5278a75c&app_key=9a93e7ba03cf805171ab45844a08eab7")!
+        
+        if let term = searchTerm {
+            let queryItem = URLQueryItem(name: "q", value: term)
+            var components = URLComponents(url: url, resolvingAgainstBaseURL: false)!
+            components.queryItems?.append(queryItem)
+            url = components.url!
+        }
+        
+        let request = URLRequest(url: url)
+        
     }
 }

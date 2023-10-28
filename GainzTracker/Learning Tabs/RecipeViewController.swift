@@ -7,7 +7,7 @@
 import UIKit
 
 class RecipeViewController: UIViewController, UITableViewDataSource {
-    var recipes: [Recipe] = []
+    var recipes: [RecipeDetail] = []
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -33,7 +33,7 @@ class RecipeViewController: UIViewController, UITableViewDataSource {
             let decoder = JSONDecoder()
 
             do {
-                let response = try decoder.decode(RecipeResponse.self, from: data)
+                let response = try decoder.decode(RecipeSearchResponse.self, from: data)
                 self?.recipes = response.hits.map { $0.recipe }
                 
                 DispatchQueue.main.async {

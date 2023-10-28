@@ -12,7 +12,7 @@ import Nuke
 class RecipeCell: UITableViewCell {
     
     @IBOutlet weak var recipeTitleLabel: UILabel!
-    @IBOutlet weak var recipeOverviewLabel: UILabel! // You might want to adjust this depending on what kind of overview or detail you want to show.
+    @IBOutlet weak var recipeOverviewLabel: UILabel!
     @IBOutlet weak var recipeImageView: UIImageView!
 
     override func awakeFromNib() {
@@ -23,15 +23,12 @@ class RecipeCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-//    func configure(with recipe: Recipe) {
-//        recipeTitleLabel.text = recipe.label
-//        
-//
-//        recipeOverviewLabel.text = recipe.ingredientLines.first
-//        
-////        if let imageURL = URL(string: recipe.image) {
-////            Nuke.loadImage(with: imageURL, into: recipeImageView)
-////        }
-//    }
+    func configure(with recipe: RecipeDetail) {
+        recipeTitleLabel.text = recipe.label
+        recipeOverviewLabel.text = recipe.ingredientLines?.first
+        
+        if let imageURL = URL(string: recipe.image.absoluteString) {
+            Nuke.loadImage(with: imageURL, into: recipeImageView)
+        }
+    }
 }
-

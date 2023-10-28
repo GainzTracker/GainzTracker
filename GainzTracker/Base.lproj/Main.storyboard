@@ -105,15 +105,53 @@
             </objects>
             <point key="canvasLocation" x="985.49618320610682" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--GainzTracker-->
         <scene sceneID="vFg-A0-mBC">
             <objects>
                 <viewController id="uJG-gY-zlJ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2SY-La-wOK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6l4-wB-Kqa">
+                                <rect key="frame" x="46" y="183" width="135" height="117"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="laY-SJ-i5X">
+                                <rect key="frame" x="212" y="194" width="41.333333333333343" height="89"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQQ-ta-csr">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knX-fG-ldU">
+                                        <rect key="frame" x="0.0" y="34.333333333333336" width="41.333333333333336" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUq-Wa-FBI">
+                                        <rect key="frame" x="0.0" y="68.666666666666671" width="41.333333333333336" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GeR-2d-vOb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6l4-wB-Kqa" firstAttribute="leading" secondItem="GeR-2d-vOb" secondAttribute="leading" constant="16" id="7T5-lD-rer"/>
+                            <constraint firstItem="GeR-2d-vOb" firstAttribute="bottom" secondItem="6l4-wB-Kqa" secondAttribute="bottom" constant="16" id="Rsw-HN-wZx"/>
+                            <constraint firstItem="GeR-2d-vOb" firstAttribute="trailing" secondItem="laY-SJ-i5X" secondAttribute="trailing" constant="16" id="SM1-V4-bCB"/>
+                            <constraint firstItem="laY-SJ-i5X" firstAttribute="leading" secondItem="6l4-wB-Kqa" secondAttribute="trailing" constant="16" id="YfJ-Ux-ru9"/>
+                            <constraint firstItem="6l4-wB-Kqa" firstAttribute="top" secondItem="GeR-2d-vOb" secondAttribute="top" constant="16" id="bvH-bH-Euz"/>
+                            <constraint firstItem="laY-SJ-i5X" firstAttribute="top" secondItem="GeR-2d-vOb" secondAttribute="top" constant="64" id="iEg-R1-O31"/>
+                            <constraint firstItem="GeR-2d-vOb" firstAttribute="bottom" secondItem="laY-SJ-i5X" secondAttribute="bottom" constant="64" id="jN3-iz-p5D"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="bCO-Ql-qEg">
                         <imageReference key="image" image="house.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
@@ -124,11 +162,11 @@
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" id="OHd-Hl-Owg"/>
+                    <navigationItem key="navigationItem" title="GainzTracker" id="OHd-Hl-Owg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Xu-P4-BoT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1827" y="756"/>
+            <point key="canvasLocation" x="1826.7175572519084" y="755.63380281690149"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="2wa-aH-Lie">
@@ -432,6 +470,7 @@
     </scenes>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
