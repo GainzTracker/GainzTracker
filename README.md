@@ -66,7 +66,7 @@ Diary-like app usable for tracking food and workouts done on a day.
 => Click each item for more detail
 
 ## Wireframes
-![IMG_1388](https://github.com/kcarcache/GainzTracker/assets/102626281/38cc678a-d635-4ac3-818d-c60d284e0f10)
+![](https://hackmd.io/_uploads/BJR9C8uG6.jpg)
 
 
 ### [BONUS] Digital Wireframes & Mockups
