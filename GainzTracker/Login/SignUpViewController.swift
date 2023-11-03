@@ -33,7 +33,6 @@ class SignUpViewController: UIViewController {
             return
         }
 
-        // TODO: Pt 1 - Parse user sign up
         var newUser = User()
         newUser.username = username
         newUser.email = email

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B01444A52AF4776400A64FBF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01444A42AF4776300A64FBF /* HomeViewController.swift */; };
 		B04900F82AEAA1AA001AA08A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04900F72AEAA1AA001AA08A /* SignUpViewController.swift */; };
 		B04900FA2AEAA1B9001AA08A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04900F92AEAA1B9001AA08A /* LoginViewController.swift */; };
 		B04900FD2AEAA268001AA08A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04900FC2AEAA268001AA08A /* User.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B01444A42AF4776300A64FBF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B04900F72AEAA1AA001AA08A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B04900F92AEAA1B9001AA08A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B04900FC2AEAA268001AA08A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				B04901042AEAFC8D001AA08A /* Learning Tabs */,
 				B049010F2AEBC822001AA08A /* Cells */,
 				C3A254C82AE3585F00746AC4 /* ViewController.swift */,
+				B01444A42AF4776300A64FBF /* HomeViewController.swift */,
 				C3A254CA2AE3585F00746AC4 /* Main.storyboard */,
 				C3A254CD2AE3586000746AC4 /* Assets.xcassets */,
 				C3A254CF2AE3586000746AC4 /* LaunchScreen.storyboard */,
@@ -234,6 +237,7 @@
 				C3A254C92AE3585F00746AC4 /* ViewController.swift in Sources */,
 				C3A254C52AE3585F00746AC4 /* AppDelegate.swift in Sources */,
 				B049011C2AEBC971001AA08A /* WorkoutCell.swift in Sources */,
+				B01444A52AF4776400A64FBF /* HomeViewController.swift in Sources */,
 				B049010E2AEB0970001AA08A /* Workout.swift in Sources */,
 				B04901062AEAFCB5001AA08A /* RecipeViewController.swift in Sources */,
 				B04900FD2AEAA268001AA08A /* User.swift in Sources */,
