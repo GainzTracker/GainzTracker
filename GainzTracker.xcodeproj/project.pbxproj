@@ -22,7 +22,7 @@
 		B04901182AEBC8C9001AA08A /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = B04901172AEBC8C9001AA08A /* NukeUI */; };
 		B049011A2AEBC8C9001AA08A /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = B04901192AEBC8C9001AA08A /* NukeVideo */; };
 		B049011C2AEBC971001AA08A /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049011B2AEBC971001AA08A /* WorkoutCell.swift */; };
-		B049011E2AEBDF25001AA08A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049011D2AEBDF25001AA08A /* DetailViewController.swift */; };
+		B0D2610A2AF552290001A2B1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D261092AF552290001A2B1 /* SearchViewController.swift */; };
 		C3A254C52AE3585F00746AC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C42AE3585F00746AC4 /* AppDelegate.swift */; };
 		C3A254C72AE3585F00746AC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C62AE3585F00746AC4 /* SceneDelegate.swift */; };
 		C3A254C92AE3585F00746AC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C82AE3585F00746AC4 /* ViewController.swift */; };
@@ -42,7 +42,7 @@
 		B049010D2AEB0970001AA08A /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		B04901102AEBC835001AA08A /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		B049011B2AEBC971001AA08A /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
-		B049011D2AEBDF25001AA08A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B0D261092AF552290001A2B1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C3A254C12AE3585F00746AC4 /* GainzTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GainzTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A254C42AE3585F00746AC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3A254C62AE3585F00746AC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 			children = (
 				B04901052AEAFCB5001AA08A /* RecipeViewController.swift */,
 				B04901082AEAFCD1001AA08A /* WorkoutViewController.swift */,
-				B049011D2AEBDF25001AA08A /* DetailViewController.swift */,
+				B0D261092AF552290001A2B1 /* SearchViewController.swift */,
 			);
 			path = "Learning Tabs";
 			sourceTree = "<group>";
@@ -232,7 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B049011E2AEBDF25001AA08A /* DetailViewController.swift in Sources */,
+				B0D2610A2AF552290001A2B1 /* SearchViewController.swift in Sources */,
 				B04901092AEAFCD1001AA08A /* WorkoutViewController.swift in Sources */,
 				C3A254C92AE3585F00746AC4 /* ViewController.swift in Sources */,
 				C3A254C52AE3585F00746AC4 /* AppDelegate.swift in Sources */,
