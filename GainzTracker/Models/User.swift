@@ -1,10 +1,3 @@
-//
-//  User.swift
-//  GainzTracker
-//
-//  Created by Abigail Johnson on 10/26/23.
-//
-
 import UIKit
 import ParseSwift
 
@@ -22,6 +15,13 @@ struct User: ParseUser {
     var authData: [String: [String: String]?]?
 
     var lastPostedDate: Date?
-    
     var profileImage: ParseFile?
+
+    var height: Double?
+    var weight: Double?
+    var weightGoal: Double?
+
+    init() {
+        
+    }
 }
