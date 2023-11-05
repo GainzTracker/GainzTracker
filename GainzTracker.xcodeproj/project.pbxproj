@@ -13,8 +13,6 @@
 		B04900FD2AEAA268001AA08A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04900FC2AEAA268001AA08A /* User.swift */; };
 		B04901032AEAB405001AA08A /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B04901022AEAB405001AA08A /* ParseSwift */; };
 		B04901092AEAFCD1001AA08A /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04901082AEAFCD1001AA08A /* WorkoutViewController.swift */; };
-		B049010C2AEB0054001AA08A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049010B2AEB0054001AA08A /* Recipe.swift */; };
-		B049010E2AEB0970001AA08A /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049010D2AEB0970001AA08A /* Workout.swift */; };
 		B04901142AEBC8C9001AA08A /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = B04901132AEBC8C9001AA08A /* Nuke */; };
 		B04901162AEBC8C9001AA08A /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = B04901152AEBC8C9001AA08A /* NukeExtensions */; };
 		B04901182AEBC8C9001AA08A /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = B04901172AEBC8C9001AA08A /* NukeUI */; };
@@ -25,10 +23,10 @@
 		B0DF07B92AF7BCEA00088901 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DF07B82AF7BCEA00088901 /* RecipeTableViewController.swift */; };
 		C3A254C52AE3585F00746AC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C42AE3585F00746AC4 /* AppDelegate.swift */; };
 		C3A254C72AE3585F00746AC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C62AE3585F00746AC4 /* SceneDelegate.swift */; };
-		C3A254C92AE3585F00746AC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C82AE3585F00746AC4 /* ViewController.swift */; };
 		C3A254CC2AE3585F00746AC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A254CA2AE3585F00746AC4 /* Main.storyboard */; };
 		C3A254CE2AE3586000746AC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A254CD2AE3586000746AC4 /* Assets.xcassets */; };
 		C3A254D12AE3586000746AC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A254CF2AE3586000746AC4 /* LaunchScreen.storyboard */; };
+		C3CCF43C2AF8276200A48E51 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CCF43B2AF8276200A48E51 /* Recipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +35,6 @@
 		B04900F92AEAA1B9001AA08A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B04900FC2AEAA268001AA08A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B04901082AEAFCD1001AA08A /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
-		B049010B2AEB0054001AA08A /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		B049010D2AEB0970001AA08A /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		B0D1E0162AF7078C00E1B133 /* EdamamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamService.swift; sourceTree = "<group>"; };
 		B0D1E0192AF7086400E1B133 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		B0D261092AF552290001A2B1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -46,11 +42,11 @@
 		C3A254C12AE3585F00746AC4 /* GainzTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GainzTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A254C42AE3585F00746AC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3A254C62AE3585F00746AC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C3A254C82AE3585F00746AC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C3A254CB2AE3585F00746AC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3A254CD2AE3586000746AC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3A254D02AE3586000746AC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3A254D22AE3586000746AC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3CCF43B2AF8276200A48E51 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,25 +78,23 @@
 			isa = PBXGroup;
 			children = (
 				B04900FC2AEAA268001AA08A /* User.swift */,
+				C3CCF43B2AF8276200A48E51 /* Recipe.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		B04901042AEAFC8D001AA08A /* Learning Tabs */ = {
+		B04901042AEAFC8D001AA08A /* Search Tabs */ = {
 			isa = PBXGroup;
 			children = (
 				B04901082AEAFCD1001AA08A /* WorkoutViewController.swift */,
 				B0D261092AF552290001A2B1 /* SearchViewController.swift */,
-				B0DF07B82AF7BCEA00088901 /* RecipeTableViewController.swift */,
 			);
-			path = "Learning Tabs";
+			path = "Search Tabs";
 			sourceTree = "<group>";
 		};
 		B049010A2AEB0046001AA08A /* APIs */ = {
 			isa = PBXGroup;
 			children = (
-				B049010B2AEB0054001AA08A /* Recipe.swift */,
-				B049010D2AEB0970001AA08A /* Workout.swift */,
 				B0D1E0162AF7078C00E1B133 /* EdamamService.swift */,
 			);
 			path = APIs;
@@ -146,9 +140,9 @@
 				B049010A2AEB0046001AA08A /* APIs */,
 				B04900F62AEAA15E001AA08A /* Login */,
 				B04900FB2AEAA25A001AA08A /* Models */,
-				B04901042AEAFC8D001AA08A /* Learning Tabs */,
 				B049010F2AEBC822001AA08A /* Cells */,
-				C3A254C82AE3585F00746AC4 /* ViewController.swift */,
+				B04901042AEAFC8D001AA08A /* Search Tabs */,
+				C3CCF43D2AF8359D00A48E51 /* Learning Tabs */,
 				B01444A42AF4776300A64FBF /* HomeViewController.swift */,
 				C3A254CA2AE3585F00746AC4 /* Main.storyboard */,
 				C3A254CD2AE3586000746AC4 /* Assets.xcassets */,
@@ -156,6 +150,14 @@
 				C3A254D22AE3586000746AC4 /* Info.plist */,
 			);
 			path = GainzTracker;
+			sourceTree = "<group>";
+		};
+		C3CCF43D2AF8359D00A48E51 /* Learning Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				B0DF07B82AF7BCEA00088901 /* RecipeTableViewController.swift */,
+			);
+			path = "Learning Tabs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,15 +244,13 @@
 			files = (
 				B0D2610A2AF552290001A2B1 /* SearchViewController.swift in Sources */,
 				B04901092AEAFCD1001AA08A /* WorkoutViewController.swift in Sources */,
-				C3A254C92AE3585F00746AC4 /* ViewController.swift in Sources */,
 				C3A254C52AE3585F00746AC4 /* AppDelegate.swift in Sources */,
 				B01444A52AF4776400A64FBF /* HomeViewController.swift in Sources */,
-				B049010E2AEB0970001AA08A /* Workout.swift in Sources */,
 				B04900FD2AEAA268001AA08A /* User.swift in Sources */,
 				B04900F82AEAA1AA001AA08A /* SignUpViewController.swift in Sources */,
 				B0DF07B92AF7BCEA00088901 /* RecipeTableViewController.swift in Sources */,
+				C3CCF43C2AF8276200A48E51 /* Recipe.swift in Sources */,
 				B0D1E0172AF7078C00E1B133 /* EdamamService.swift in Sources */,
-				B049010C2AEB0054001AA08A /* Recipe.swift in Sources */,
 				B04900FA2AEAA1B9001AA08A /* LoginViewController.swift in Sources */,
 				C3A254C72AE3585F00746AC4 /* SceneDelegate.swift in Sources */,
 				B0D1E01A2AF7086400E1B133 /* RecipeTableViewCell.swift in Sources */,

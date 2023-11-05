@@ -7,15 +7,16 @@
 
 import UIKit
 import ParseSwift
+import SwiftUI
 
 class SignUpViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var heightField: UITextField!
-    @IBOutlet weak var weightField: UITextField!
-    @IBOutlet weak var weightGoalField: UITextField!
+    @IBOutlet weak var heightField: UIStepper!
+    @IBOutlet weak var weightField: UIStepper!
+    @IBOutlet weak var weightGoalField: UIStepper!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +28,15 @@ class SignUpViewController: UIViewController {
         guard let username = usernameField.text,
               let email = emailField.text,
               let password = passwordField.text,
-              let height = heightField.text,
-              let weight = weightField.text,
-              let weightGoal = weightGoalField.text,
+              let height : Double? = heightField.stepValue,
+              let weight : Double? = weightField.value,
+              let weightGoal : Double? = weightGoalField.value,
               !username.isEmpty,
               !email.isEmpty,
               !password.isEmpty,
-              !height.isEmpty,
-              !weight.isEmpty,
-              !weightGoal.isEmpty else {
+              !height!.isZero,
+              !weight!.isZero,
+              !weightGoal!.isZero else {
 
             showMissingFieldsAlert()
             return

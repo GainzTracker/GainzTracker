@@ -9,9 +9,11 @@ import UIKit
 import Nuke
 
 class RecipeTableViewController: UITableViewController {
-    var recipes = [Recipe]()
     
-
+    var recipes: [Recipe] = []
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
