@@ -1,15 +1,16 @@
 //
-//  RecipeViewController.swift
+//  RecipeTableViewController.swift
 //  GainzTracker
 //
-//  Created by Abigail Johnson on 10/26/23.
+//  Created by Abigail Johnson on 11/5/23.
+//
 
 import UIKit
+import Nuke
 
-class RecipesViewController: UIViewController {
+class RecipeTableViewController: UITableViewController {
     var recipes = [Recipe]()
-
-    @IBOutlet weak var tableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,31 +30,33 @@ class RecipesViewController: UIViewController {
                     self?.tableView.reloadData()
                 case .failure(let error):
                     print(error.localizedDescription)
-                    // Show user an error state
                 }
             }
         }
     }
-}
+    
+    // MARK: - Table view data source
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 
-// MARK: - UITableViewDataSource
-extension RecipesViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as! RecipeTableViewCell
         let recipe = recipes[indexPath.row]
-        cell.titleLabel?.text = recipe.label
-        cell.descriptionLabel?.text = recipe.briefDescription
+        cell.RecipeTitle?.text = recipe.label
+        cell.RecipeOverview?.text = recipe.briefDescription
         return cell
     }
-}
 
-// MARK: - UITableViewDelegate
-extension RecipesViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        _ = recipes[indexPath.row]
+    // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedRecipe = recipes[indexPath.row]
     }
+    
 }
