@@ -16,12 +16,12 @@
 		B04901092AEAFCD1001AA08A /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04901082AEAFCD1001AA08A /* WorkoutViewController.swift */; };
 		B049010C2AEB0054001AA08A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049010B2AEB0054001AA08A /* Recipe.swift */; };
 		B049010E2AEB0970001AA08A /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049010D2AEB0970001AA08A /* Workout.swift */; };
-		B04901112AEBC835001AA08A /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04901102AEBC835001AA08A /* RecipeCell.swift */; };
 		B04901142AEBC8C9001AA08A /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = B04901132AEBC8C9001AA08A /* Nuke */; };
 		B04901162AEBC8C9001AA08A /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = B04901152AEBC8C9001AA08A /* NukeExtensions */; };
 		B04901182AEBC8C9001AA08A /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = B04901172AEBC8C9001AA08A /* NukeUI */; };
 		B049011A2AEBC8C9001AA08A /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = B04901192AEBC8C9001AA08A /* NukeVideo */; };
-		B049011C2AEBC971001AA08A /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049011B2AEBC971001AA08A /* WorkoutCell.swift */; };
+		B0D1E0172AF7078C00E1B133 /* EdamamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D1E0162AF7078C00E1B133 /* EdamamService.swift */; };
+		B0D1E01A2AF7086400E1B133 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D1E0192AF7086400E1B133 /* RecipeTableViewCell.swift */; };
 		B0D2610A2AF552290001A2B1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D261092AF552290001A2B1 /* SearchViewController.swift */; };
 		C3A254C52AE3585F00746AC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C42AE3585F00746AC4 /* AppDelegate.swift */; };
 		C3A254C72AE3585F00746AC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C62AE3585F00746AC4 /* SceneDelegate.swift */; };
@@ -40,8 +40,8 @@
 		B04901082AEAFCD1001AA08A /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		B049010B2AEB0054001AA08A /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		B049010D2AEB0970001AA08A /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
-		B04901102AEBC835001AA08A /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
-		B049011B2AEBC971001AA08A /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
+		B0D1E0162AF7078C00E1B133 /* EdamamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamService.swift; sourceTree = "<group>"; };
+		B0D1E0192AF7086400E1B133 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		B0D261092AF552290001A2B1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C3A254C12AE3585F00746AC4 /* GainzTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GainzTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A254C42AE3585F00746AC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +101,7 @@
 			children = (
 				B049010B2AEB0054001AA08A /* Recipe.swift */,
 				B049010D2AEB0970001AA08A /* Workout.swift */,
+				B0D1E0162AF7078C00E1B133 /* EdamamService.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -108,10 +109,16 @@
 		B049010F2AEBC822001AA08A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				B04901102AEBC835001AA08A /* RecipeCell.swift */,
-				B049011B2AEBC971001AA08A /* WorkoutCell.swift */,
+				B0D1E0192AF7086400E1B133 /* RecipeTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		B0D1E0182AF7081C00E1B133 /* RecipeCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RecipeCell;
 			sourceTree = "<group>";
 		};
 		C3A254B82AE3585F00746AC4 = {
@@ -133,6 +140,7 @@
 		C3A254C32AE3585F00746AC4 /* GainzTracker */ = {
 			isa = PBXGroup;
 			children = (
+				B0D1E0182AF7081C00E1B133 /* RecipeCell */,
 				C3A254C42AE3585F00746AC4 /* AppDelegate.swift */,
 				C3A254C62AE3585F00746AC4 /* SceneDelegate.swift */,
 				B049010A2AEB0046001AA08A /* APIs */,
@@ -236,16 +244,16 @@
 				B04901092AEAFCD1001AA08A /* WorkoutViewController.swift in Sources */,
 				C3A254C92AE3585F00746AC4 /* ViewController.swift in Sources */,
 				C3A254C52AE3585F00746AC4 /* AppDelegate.swift in Sources */,
-				B049011C2AEBC971001AA08A /* WorkoutCell.swift in Sources */,
 				B01444A52AF4776400A64FBF /* HomeViewController.swift in Sources */,
 				B049010E2AEB0970001AA08A /* Workout.swift in Sources */,
 				B04901062AEAFCB5001AA08A /* RecipeViewController.swift in Sources */,
 				B04900FD2AEAA268001AA08A /* User.swift in Sources */,
-				B04901112AEBC835001AA08A /* RecipeCell.swift in Sources */,
 				B04900F82AEAA1AA001AA08A /* SignUpViewController.swift in Sources */,
+				B0D1E0172AF7078C00E1B133 /* EdamamService.swift in Sources */,
 				B049010C2AEB0054001AA08A /* Recipe.swift in Sources */,
 				B04900FA2AEAA1B9001AA08A /* LoginViewController.swift in Sources */,
 				C3A254C72AE3585F00746AC4 /* SceneDelegate.swift in Sources */,
+				B0D1E01A2AF7086400E1B133 /* RecipeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
