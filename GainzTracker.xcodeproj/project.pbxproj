@@ -108,13 +108,6 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		B0D1E0182AF7081C00E1B133 /* RecipeCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RecipeCell;
-			sourceTree = "<group>";
-		};
 		C3A254B82AE3585F00746AC4 = {
 			isa = PBXGroup;
 			children = (
@@ -134,7 +127,6 @@
 		C3A254C32AE3585F00746AC4 /* GainzTracker */ = {
 			isa = PBXGroup;
 			children = (
-				B0D1E0182AF7081C00E1B133 /* RecipeCell */,
 				C3A254C42AE3585F00746AC4 /* AppDelegate.swift */,
 				C3A254C62AE3585F00746AC4 /* SceneDelegate.swift */,
 				B049010A2AEB0046001AA08A /* APIs */,

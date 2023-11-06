@@ -102,11 +102,11 @@ class RecipesViewController: UITableViewController {
             //detailViewController.recipe = recipe
         }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         // Get a cell with identifier, "TrackCell"
         // the `dequeueReusableCell(withIdentifier:)` method just returns a generic UITableViewCell so it's necessary to cast it to our specific custom cell.
@@ -116,7 +116,7 @@ class RecipesViewController: UITableViewController {
         let recipe = recipes[indexPath.row]
 
         // Configure the cell with it's associated track
-        cell.configure(with: recipe)
+        cell.configure(with: RecipeTableViewCell)
 
         // return the cell for display in the table view
         return cell
