@@ -82,7 +82,7 @@ https://imgur.com/I4osaMC
 [Add table of models]
 
 ## Networking
-Back4App - Stores user data
-Workout API - Live Fitness and Health News
-Recipes API (see picture below) - Edamam API
+* Back4App - Stores user data
+* Workout API - Live Fitness and Health News
+* Recipes API (see picture below) - Edamam API
 ![WhatsApp Image 2023-11-05 at 3.09.37 PM.jpeg](https://hackmd.io/_uploads/HJs3VkLXp.jpg)
