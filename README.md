@@ -70,6 +70,8 @@ Diary-like app usable for tracking food and workouts done on a day.
 
 
 ### [BONUS] Digital Wireframes & Mockups
+https://drive.google.com/drive/folders/19NWXrHAHc-VsS6--pE5gMFOzZpGIjQOU
+
 ### [BONUS] Interactive Prototype
 ## Schema
 [This section will be completed in Unit 9]
@@ -78,6 +80,4 @@ Diary-like app usable for tracking food and workouts done on a day.
 [Add table of models]
 
 ## Networking
-[Add list of network requests by screen ]
-[Create basic snippets for each Parse network request]
-[OPTIONAL: List endpoints if using existing API such as Yelp]
+![WhatsApp Image 2023-11-05 at 3.09.37 PM.jpeg](https://hackmd.io/_uploads/HJs3VkLXp.jpg)
