@@ -22,10 +22,10 @@ Diary-like app usable for tracking food and workouts done on a day.
 ### 1. User Stories (Required and Optional)
 **Required Must-have Stories**
 
-* Users can click between recipes and workouts
-* Users see a list of articles
-* Users can click into an article to see the content, images, and media.
-* Users can search for recipes or workouts
+* Users can click between recipes and workouts - ✅
+* Users see a list of articles - ✅
+* Users can click into an article to see the content, images, and media - ✅
+* Users can search for recipes or workouts - ✅
 
 **Optional Nice-to-have Stories**
 
@@ -70,14 +70,22 @@ Diary-like app usable for tracking food and workouts done on a day.
 
 
 ### [BONUS] Digital Wireframes & Mockups
+https://drive.google.com/drive/folders/19NWXrHAHc-VsS6--pE5gMFOzZpGIjQOU
+
 ### [BONUS] Interactive Prototype
+https://imgur.com/I4osaMC
+
 ## Schema
 [This section will be completed in Unit 9]
 
 ## Models
-[Add table of models]
+1. Recipe
+2. News
+3. Exercise
+4. Meals
 
 ## Networking
-[Add list of network requests by screen ]
-[Create basic snippets for each Parse network request]
-[OPTIONAL: List endpoints if using existing API such as Yelp]
+* Back4App - Stores user data
+* Workout API - Live Fitness and Health News
+* Recipes API (see picture below) - Edamam API
+![WhatsApp Image 2023-11-05 at 3.09.37 PM.jpeg](https://hackmd.io/_uploads/HJs3VkLXp.jpg)
