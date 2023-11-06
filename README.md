@@ -79,7 +79,10 @@ https://imgur.com/I4osaMC
 [This section will be completed in Unit 9]
 
 ## Models
-[Add table of models]
+1. Recipe
+2. News
+3. Exercise
+4. Meals
 
 ## Networking
 * Back4App - Stores user data
