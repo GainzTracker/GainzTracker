@@ -73,6 +73,8 @@ Diary-like app usable for tracking food and workouts done on a day.
 https://drive.google.com/drive/folders/19NWXrHAHc-VsS6--pE5gMFOzZpGIjQOU
 
 ### [BONUS] Interactive Prototype
+![]https://imgur.com/I4osaMC
+
 ## Schema
 [This section will be completed in Unit 9]
 
