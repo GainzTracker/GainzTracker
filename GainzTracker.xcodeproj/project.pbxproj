@@ -20,13 +20,13 @@
 		B0D1E0172AF7078C00E1B133 /* EdamamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D1E0162AF7078C00E1B133 /* EdamamService.swift */; };
 		B0D1E01A2AF7086400E1B133 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D1E0192AF7086400E1B133 /* RecipeTableViewCell.swift */; };
 		B0D2610A2AF552290001A2B1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D261092AF552290001A2B1 /* SearchViewController.swift */; };
-		B0DF07B92AF7BCEA00088901 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DF07B82AF7BCEA00088901 /* RecipeTableViewController.swift */; };
 		C3A254C52AE3585F00746AC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C42AE3585F00746AC4 /* AppDelegate.swift */; };
 		C3A254C72AE3585F00746AC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C62AE3585F00746AC4 /* SceneDelegate.swift */; };
 		C3A254CC2AE3585F00746AC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A254CA2AE3585F00746AC4 /* Main.storyboard */; };
 		C3A254CE2AE3586000746AC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A254CD2AE3586000746AC4 /* Assets.xcassets */; };
 		C3A254D12AE3586000746AC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A254CF2AE3586000746AC4 /* LaunchScreen.storyboard */; };
 		C3CCF43C2AF8276200A48E51 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CCF43B2AF8276200A48E51 /* Recipe.swift */; };
+		C3CCF43F2AF85F0D00A48E51 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CCF43E2AF85F0D00A48E51 /* RecipesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +38,6 @@
 		B0D1E0162AF7078C00E1B133 /* EdamamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamService.swift; sourceTree = "<group>"; };
 		B0D1E0192AF7086400E1B133 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		B0D261092AF552290001A2B1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		B0DF07B82AF7BCEA00088901 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
 		C3A254C12AE3585F00746AC4 /* GainzTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GainzTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A254C42AE3585F00746AC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3A254C62AE3585F00746AC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		C3A254D02AE3586000746AC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3A254D22AE3586000746AC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3CCF43B2AF8276200A48E51 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		C3CCF43E2AF85F0D00A48E51 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +155,7 @@
 		C3CCF43D2AF8359D00A48E51 /* Learning Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				B0DF07B82AF7BCEA00088901 /* RecipeTableViewController.swift */,
+				C3CCF43E2AF85F0D00A48E51 /* RecipesViewController.swift */,
 			);
 			path = "Learning Tabs";
 			sourceTree = "<group>";
@@ -248,11 +248,11 @@
 				B01444A52AF4776400A64FBF /* HomeViewController.swift in Sources */,
 				B04900FD2AEAA268001AA08A /* User.swift in Sources */,
 				B04900F82AEAA1AA001AA08A /* SignUpViewController.swift in Sources */,
-				B0DF07B92AF7BCEA00088901 /* RecipeTableViewController.swift in Sources */,
 				C3CCF43C2AF8276200A48E51 /* Recipe.swift in Sources */,
 				B0D1E0172AF7078C00E1B133 /* EdamamService.swift in Sources */,
 				B04900FA2AEAA1B9001AA08A /* LoginViewController.swift in Sources */,
 				C3A254C72AE3585F00746AC4 /* SceneDelegate.swift in Sources */,
+				C3CCF43F2AF85F0D00A48E51 /* RecipesViewController.swift in Sources */,
 				B0D1E01A2AF7086400E1B133 /* RecipeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

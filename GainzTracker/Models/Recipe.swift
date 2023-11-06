@@ -8,14 +8,13 @@
 import Foundation
 
 struct Recipe: Decodable {
-    let recipeTitle: String
-    let recipeOverview: String
-    let recipePic: URL
-    
-    let source: URL
+    let label: String
+    let image: URL
+    let url: URL
     let calories: Double
     let cuisineType: String
     let mealType: String
+    let ingredientLines: [String]
 }
 
 struct RecipesResponse: Decodable {
