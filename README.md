@@ -22,9 +22,9 @@ Diary-like app usable for tracking food and workouts done on a day.
 ### 1. User Stories (Required and Optional)
 **Required Must-have Stories**
 
-* Users can click between recipes and workouts
+* Users can click between recipes and workouts - ✅
 * Users see a list of articles
-* Users can click into an article to see the content, images, and media - ✅
+* Users can click into an article to see the content, images, and media 
 * Users can search for recipes or workouts
 
 **Optional Nice-to-have Stories**
