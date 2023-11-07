@@ -13,5 +13,24 @@ class ExerciseTableViewCell: UITableViewCell {
     @IBOutlet weak var repsLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
 
-}
 
+    @IBAction func nameLabelTapped(_ sender: Any) {
+        nameLabel.text = "Enter Workout"
+    }
+
+    
+    @IBAction func SetsNumberTapped(_ sender: Any) {
+        setsLabel.text = "Enter Sets"
+    }
+    
+    
+    @IBAction func RepsNumberTapped(_ sender: Any) {
+        repsLabel.text = "Enter Reps"
+    }
+    
+    @IBAction func WeightNumberTapped(_ sender: Any) {
+        weightLabel.text = "Enter Weight"
+    }
+    
+    
+}
