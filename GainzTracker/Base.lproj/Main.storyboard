@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Taz-Ip-vIT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Taz-Ip-vIT">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -473,7 +473,7 @@
             </objects>
             <point key="canvasLocation" x="3530.5343511450378" y="2300.7042253521126"/>
         </scene>
-        <!--Recipes View Controller-->
+        <!--Recipe Finder-->
         <scene sceneID="IyK-YP-T4M">
             <objects>
                 <viewController id="FAO-Dg-bKA" customClass="RecipesViewController" customModule="GainzTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -485,7 +485,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="709"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" rowHeight="131" id="Ds7-Us-VlA" customClass="RecipeTableViewCell" customModule="GainzTracker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" rowHeight="131" id="Ds7-Us-VlA" customClass="RecipeCell">
                                         <rect key="frame" x="0.0" y="50" width="393" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ds7-Us-VlA" id="tkv-ur-eKz">
@@ -537,6 +537,7 @@
                                             <outlet property="RecipeMeal" destination="keY-TN-qtS" id="sik-3P-A0h"/>
                                             <outlet property="RecipePicture" destination="C8t-84-0Hi" id="Gcy-jz-VDl"/>
                                             <outlet property="RecipeTitle" destination="6EW-jT-HgR" id="9T0-wD-dcU"/>
+                                            <segue destination="aIE-aj-uP4" kind="showDetail" id="5y7-4r-hYr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -551,7 +552,9 @@
                             <constraint firstItem="XF4-C1-TtE" firstAttribute="leading" secondItem="hLP-zs-Eod" secondAttribute="leading" id="nMV-XN-9pW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gRM-KH-MAV"/>
+                    <navigationItem key="navigationItem" title="Recipe Finder" id="gRM-KH-MAV">
+                        <barButtonItem key="backBarButtonItem" title="Recipes" id="5V1-nF-Ko9"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="recipeTable" destination="XF4-C1-TtE" id="VqX-bp-JX3"/>
                     </connections>
@@ -559,6 +562,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n98-n0-5yA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2701.5267175572517" y="2300.7042253521126"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YUM-zI-qtJ">
+            <objects>
+                <viewController id="aIE-aj-uP4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="02J-Tj-17P">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bXD-64-IBS">
+                                <rect key="frame" x="45" y="109" width="303" height="533"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fixture.png" translatesAutoresizingMaskIntoConstraints="NO" id="m91-wH-KGY">
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="360"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obf-FJ-YEy" userLabel="RecipeLabel">
+                                        <rect key="frame" x="101" y="512.66666666666663" width="101" height="20.333333333333371"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uDc-bZ-LFl"/>
+                        <color key="backgroundColor" red="0.72740643289999996" green="0.58797916400000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bXD-64-IBS" secondAttribute="trailing" constant="45" id="D9X-Kh-TKT"/>
+                            <constraint firstAttribute="bottom" secondItem="bXD-64-IBS" secondAttribute="bottom" constant="200" id="Fao-bw-iaV"/>
+                            <constraint firstItem="bXD-64-IBS" firstAttribute="top" secondItem="02J-Tj-17P" secondAttribute="top" constant="109" id="WMg-fD-keC"/>
+                            <constraint firstItem="bXD-64-IBS" firstAttribute="leading" secondItem="02J-Tj-17P" secondAttribute="leading" constant="45" id="ga7-mk-NdI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SwG-Wo-xlT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2701.5267175572517" y="3121.1267605633802"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nqu-6W-NWi">
@@ -717,6 +757,7 @@
         <image name="1053244" width="512" height="512"/>
         <image name="checklist" catalog="system" width="128" height="107"/>
         <image name="dumbbell.fill" catalog="system" width="128" height="72"/>
+        <image name="fixture.png" width="480" height="270"/>
         <image name="fork.knife" catalog="system" width="94" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="newspaper.fill" catalog="system" width="128" height="112"/>
@@ -725,7 +766,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
