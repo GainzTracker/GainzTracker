@@ -646,6 +646,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.49476571110000001" green="0.18127547590000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="RecipeCalories" destination="UH9-0j-xFg" id="JzB-bB-0He"/>
+                                            <outlet property="RecipeMeal" destination="keY-TN-qtS" id="sik-3P-A0h"/>
+                                            <outlet property="RecipePicture" destination="C8t-84-0Hi" id="Gcy-jz-VDl"/>
+                                            <outlet property="RecipeTitle" destination="6EW-jT-HgR" id="9T0-wD-dcU"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

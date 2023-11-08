@@ -6,11 +6,15 @@
 //
 
 import UIKit
-import NukeUI
+import Nuke
+
 
 class RecipeTableViewCell: UITableViewCell {
     
-    
+    @IBOutlet weak var RecipeTitle: UILabel!
+    @IBOutlet weak var RecipeCalories: UILabel!
+    @IBOutlet weak var RecipeMeal: UILabel!
+    @IBOutlet weak var RecipePicture: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,13 +22,12 @@ class RecipeTableViewCell: UITableViewCell {
     
     func configue(with recipe: Recipe) {
         RecipeTitle.text = recipe.label
-        RecipeCalories.text = recipe.calories
+        RecipeCalories.text = String( recipe.calories)
         RecipeMeal.text = recipe.mealType
         
         //loading picture
-        //Nuke.loadImage(with: recipe.recipePic, into: RecipePicture)
-        RecipePicture.image = NukeUI.ImageRequest(recipe.recipePic)
-
+        //NukeUI.loadImage(with: recipe.image, into: RecipePicture)
+        
     }
     
     
