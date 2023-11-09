@@ -12,6 +12,7 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var tableView: UITableView! 
 
     var exercises: [Exercise] = [Exercise(name: "Push Up", sets: 3, reps: 12, weight: 0.0)]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,16 +50,27 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
                   let setsInt = Int(sets),
                   let repsInt = Int(reps),
                   let weightDouble = Double(weight) else { return }
+            
+            print("Name: \(name)")
+            print("Sets: \(setsInt)")
+            print("Reps: \(repsInt)")
+            print("Weight: \(weightDouble)")
 
+            
             let newExercise = Exercise(name: name, sets: setsInt, reps: repsInt, weight: weightDouble)
             strongSelf.exercises.append(newExercise)
             strongSelf.tableView.reloadData()
+            
+            print(strongSelf.exercises)
         }
         alert.addAction(addAction)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(cancelAction)
 
         present(alert, animated: true, completion: nil)
+        
+
+
     }
 
     // UITableViewDataSource Methods

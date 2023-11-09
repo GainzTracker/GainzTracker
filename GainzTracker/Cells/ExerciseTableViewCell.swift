@@ -32,6 +32,7 @@ class ExerciseTableViewCell: UITableViewCell, UITextFieldDelegate {
             weightTextField.text = "\(exercise?.weight ?? 0.0)"
         }
     }
+
     
     var onExerciseUpdated: ((Exercise) -> Void)?
     
@@ -48,7 +49,7 @@ class ExerciseTableViewCell: UITableViewCell, UITextFieldDelegate {
     // MARK: - UITextFieldDelegate
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let exercise = exercise else { return }
-        
+
         if textField == nameTextField {
             self.exercise?.name = textField.text ?? ""
         } else if textField == setsTextField {
@@ -58,10 +59,8 @@ class ExerciseTableViewCell: UITableViewCell, UITextFieldDelegate {
         } else if textField == weightTextField {
             self.exercise?.weight = Double(textField.text ?? "") ?? 0.0
         }
-        
-        // If there's an update closure set, call it
+
         onExerciseUpdated?(exercise)
     }
     
-    // Add other necessary methods and logic as needed
 }
