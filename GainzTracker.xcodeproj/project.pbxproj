@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B01444A52AF4776400A64FBF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01444A42AF4776300A64FBF /* ProfileViewController.swift */; };
 		B030D9542AFACDD300173536 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030D9532AFACDD300173536 /* ExerciseTableViewCell.swift */; };
 		B030D9562AFAD03800173536 /* WorkoutDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030D9552AFAD03800173536 /* WorkoutDiaryViewController.swift */; };
 		B04900F82AEAA1AA001AA08A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04900F72AEAA1AA001AA08A /* SignUpViewController.swift */; };
@@ -33,7 +32,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B01444A42AF4776300A64FBF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B030D9532AFACDD300173536 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		B030D9552AFAD03800173536 /* WorkoutDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDiaryViewController.swift; sourceTree = "<group>"; };
 		B04900F72AEAA1AA001AA08A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +131,6 @@
 				B049010F2AEBC822001AA08A /* Cells */,
 				B04901042AEAFC8D001AA08A /* Search Tabs */,
 				C3CCF43D2AF8359D00A48E51 /* Learning Tabs */,
-				B01444A42AF4776300A64FBF /* ProfileViewController.swift */,
 				C3CCF4422AFC6F1700A48E51 /* HomeViewController.swift */,
 				C3A254CA2AE3585F00746AC4 /* Main.storyboard */,
 				C3A254CD2AE3586000746AC4 /* Assets.xcassets */,
@@ -236,7 +233,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3A254C52AE3585F00746AC4 /* AppDelegate.swift in Sources */,
-				B01444A52AF4776400A64FBF /* ProfileViewController.swift in Sources */,
 				B04900FD2AEAA268001AA08A /* User.swift in Sources */,
 				C3CCF4432AFC6F1700A48E51 /* HomeViewController.swift in Sources */,
 				B04900F82AEAA1AA001AA08A /* SignUpViewController.swift in Sources */,

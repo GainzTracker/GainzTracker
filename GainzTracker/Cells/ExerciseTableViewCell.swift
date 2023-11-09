@@ -7,30 +7,61 @@
 
 import UIKit
 
-class ExerciseTableViewCell: UITableViewCell {
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var setsLabel: UILabel!
-    @IBOutlet weak var repsLabel: UILabel!
-    @IBOutlet weak var weightLabel: UILabel!
+struct Exercise {
+    var name: String
+    var sets: Int
+    var reps: Int
+    var weight: Double
+}
 
-
-    @IBAction func nameLabelTapped(_ sender: Any) {
-        nameLabel.text = "Enter Workout"
+class ExerciseTableViewCell: UITableViewCell, UITextFieldDelegate {
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var setsTextField: UITextField!
+    @IBOutlet weak var repsTextField: UITextField!
+    @IBOutlet weak var weightTextField: UITextField!
+    
+    // MARK: - Properties
+    var exercise: Exercise? {
+        didSet {
+            // Update the text fields when the exercise is set
+            nameTextField.text = exercise?.name
+            setsTextField.text = "\(exercise?.sets ?? 0)"
+            repsTextField.text = "\(exercise?.reps ?? 0)"
+            weightTextField.text = "\(exercise?.weight ?? 0.0)"
+        }
     }
-
     
-    @IBAction func SetsNumberTapped(_ sender: Any) {
-        setsLabel.text = "Enter Sets"
+    var onExerciseUpdated: ((Exercise) -> Void)?
+    
+    // MARK: - View Life Cycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Set the delegate for text fields
+        nameTextField.delegate = self
+        setsTextField.delegate = self
+        repsTextField.delegate = self
+        weightTextField.delegate = self
     }
     
-    
-    @IBAction func RepsNumberTapped(_ sender: Any) {
-        repsLabel.text = "Enter Reps"
+    // MARK: - UITextFieldDelegate
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let exercise = exercise else { return }
+        
+        if textField == nameTextField {
+            self.exercise?.name = textField.text ?? ""
+        } else if textField == setsTextField {
+            self.exercise?.sets = Int(textField.text ?? "") ?? 0
+        } else if textField == repsTextField {
+            self.exercise?.reps = Int(textField.text ?? "") ?? 0
+        } else if textField == weightTextField {
+            self.exercise?.weight = Double(textField.text ?? "") ?? 0.0
+        }
+        
+        // If there's an update closure set, call it
+        onExerciseUpdated?(exercise)
     }
     
-    @IBAction func WeightNumberTapped(_ sender: Any) {
-        weightLabel.text = "Enter Weight"
-    }
-    
-    
+    // Add other necessary methods and logic as needed
 }

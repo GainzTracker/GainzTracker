@@ -7,31 +7,61 @@
 
 import UIKit
 
-struct Exercise {
-    let name: String
-    var sets: Int
-    var reps: Int
-    var weight: Double
-}
-
 class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! 
+
     var exercises: [Exercise] = [Exercise(name: "Push Up", sets: 3, reps: 12, weight: 0.0)]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
+    }
 
-        tableView = UITableView(frame: view.bounds, style: .plain)
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(UINib(nibName: "ExerciseTableViewCell", bundle: nil), forCellReuseIdentifier: "ExerciseCell")
-        view.addSubview(tableView)
-
+    private func setupNavigationBar() {
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addExercise))
         navigationItem.rightBarButtonItem = addButton
     }
 
+    @objc func addExercise() {
+        let alert = UIAlertController(title: "New Exercise/Workout", message: "Enter details below", preferredStyle: .alert)
+        alert.addTextField { textField in
+            textField.placeholder = "Name"
+        }
+        alert.addTextField { textField in
+            textField.placeholder = "Sets"
+            textField.keyboardType = .numberPad
+        }
+        alert.addTextField { textField in
+            textField.placeholder = "Reps"
+            textField.keyboardType = .numberPad
+        }
+        alert.addTextField { textField in
+            textField.placeholder = "Weight"
+            textField.keyboardType = .decimalPad
+        }
+        let addAction = UIAlertAction(title: "Add", style: .default) { [weak self] _ in
+            guard let strongSelf = self,
+                  let name = alert.textFields?[0].text,
+                  let sets = alert.textFields?[1].text,
+                  let reps = alert.textFields?[2].text,
+                  let weight = alert.textFields?[3].text,
+                  let setsInt = Int(sets),
+                  let repsInt = Int(reps),
+                  let weightDouble = Double(weight) else { return }
+
+            let newExercise = Exercise(name: name, sets: setsInt, reps: repsInt, weight: weightDouble)
+            strongSelf.exercises.append(newExercise)
+            strongSelf.tableView.reloadData()
+        }
+        alert.addAction(addAction)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+
+        present(alert, animated: true, completion: nil)
+    }
+
+    // UITableViewDataSource Methods
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -46,23 +76,20 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
         }
 
         let exercise = exercises[indexPath.row]
-        cell.nameLabel.text = exercise.name
-        cell.setsLabel.text = "Sets: \(exercise.sets)"
-        cell.repsLabel.text = "Reps: \(exercise.reps)"
-        cell.weightLabel.text = "Weight: \(exercise.weight)"
+        cell.nameTextField.text = exercise.name
+        cell.setsTextField.text = "\(exercise.sets)"
+        cell.repsTextField.text = "\(exercise.reps)"
+        cell.weightTextField.text = "\(exercise.weight)"
+        cell.exercise = exercise
+
+        // Set the closure to handle updates from the cell
+        cell.onExerciseUpdated = { [weak self] updatedExercise in
+            guard let strongSelf = self else { return }
+            strongSelf.exercises[indexPath.row] = updatedExercise
+            strongSelf.tableView.reloadRows(at: [indexPath], with: .none)
+        }
 
         return cell
     }
 
-    @objc func addExercise() {
-        let newExercise = Exercise(name: "New Exercise", sets: 3, reps: 10, weight: 50.0)
-        exercises.append(newExercise)
-        tableView.reloadData()
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedExercise = exercises[indexPath.row]
-        print("Selected exercise: \(selectedExercise.name)")
-    }
 }
-
