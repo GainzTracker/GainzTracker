@@ -1,5 +1,5 @@
 //
-//  WorkoutViewController.swift
+//  FoodViewController.swift
 //  GainzTracker
 //
 //  Created by Alberto Costa on 11/8/23.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class WorkoutViewController: UIViewController {
+class FoodViewController: UIViewController {
     
-    var WorkoutTotalCalories: Int = 200
+    var FoodTotalCalories: Int = 500
 
     override func viewDidLoad() {
         super.viewDidLoad()

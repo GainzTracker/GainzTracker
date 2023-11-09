@@ -8,9 +8,11 @@
 import UIKit
 import Nuke
 
-class DetailViewController: UIViewController {
+class RecipeDetailViewController: UIViewController {
     
-
+    
+    @IBOutlet weak var RecipeLabel: UILabel!
+    
     var recipe: Recipe!
 
     override func viewDidLoad() {
@@ -18,7 +20,7 @@ class DetailViewController: UIViewController {
         
         //Nuke.loadImage(with: track.artworkUrl100, into: backdrop)
         
-        //ratingLabel.text = track.artistName
+        RecipeLabel.text = recipe.label
         //escText.text = track.primaryGenreName
     }
 

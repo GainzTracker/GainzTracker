@@ -7,21 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B01444A52AF4776400A64FBF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01444A42AF4776300A64FBF /* HomeViewController.swift */; };
+		B01444A52AF4776400A64FBF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01444A42AF4776300A64FBF /* ProfileViewController.swift */; };
 		B030D9542AFACDD300173536 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030D9532AFACDD300173536 /* ExerciseTableViewCell.swift */; };
 		B030D9562AFAD03800173536 /* WorkoutDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030D9552AFAD03800173536 /* WorkoutDiaryViewController.swift */; };
 		B04900F82AEAA1AA001AA08A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04900F72AEAA1AA001AA08A /* SignUpViewController.swift */; };
 		B04900FA2AEAA1B9001AA08A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04900F92AEAA1B9001AA08A /* LoginViewController.swift */; };
 		B04900FD2AEAA268001AA08A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04900FC2AEAA268001AA08A /* User.swift */; };
 		B04901032AEAB405001AA08A /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B04901022AEAB405001AA08A /* ParseSwift */; };
-		B04901092AEAFCD1001AA08A /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04901082AEAFCD1001AA08A /* WorkoutViewController.swift */; };
 		B04901142AEBC8C9001AA08A /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = B04901132AEBC8C9001AA08A /* Nuke */; };
 		B04901162AEBC8C9001AA08A /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = B04901152AEBC8C9001AA08A /* NukeExtensions */; };
 		B04901182AEBC8C9001AA08A /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = B04901172AEBC8C9001AA08A /* NukeUI */; };
 		B049011A2AEBC8C9001AA08A /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = B04901192AEBC8C9001AA08A /* NukeVideo */; };
-		B0D1E0172AF7078C00E1B133 /* EdamamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D1E0162AF7078C00E1B133 /* EdamamService.swift */; };
 		B0D1E01A2AF7086400E1B133 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D1E0192AF7086400E1B133 /* RecipeCell.swift */; };
-		B0D2610A2AF552290001A2B1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D261092AF552290001A2B1 /* SearchViewController.swift */; };
 		C3A254C52AE3585F00746AC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C42AE3585F00746AC4 /* AppDelegate.swift */; };
 		C3A254C72AE3585F00746AC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C62AE3585F00746AC4 /* SceneDelegate.swift */; };
 		C3A254CC2AE3585F00746AC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A254CA2AE3585F00746AC4 /* Main.storyboard */; };
@@ -30,19 +27,19 @@
 		C3CCF43C2AF8276200A48E51 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CCF43B2AF8276200A48E51 /* Recipe.swift */; };
 		C3CCF43F2AF85F0D00A48E51 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CCF43E2AF85F0D00A48E51 /* RecipesViewController.swift */; };
 		C3CCF4412AFB4FF500A48E51 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CCF4402AFB4FF500A48E51 /* RecipeDetailViewController.swift */; };
+		C3CCF4432AFC6F1700A48E51 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CCF4422AFC6F1700A48E51 /* HomeViewController.swift */; };
+		C3CCF4452AFC773A00A48E51 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CCF4442AFC773A00A48E51 /* FoodViewController.swift */; };
+		C3CCF4472AFC774500A48E51 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CCF4462AFC774500A48E51 /* WorkoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B01444A42AF4776300A64FBF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B01444A42AF4776300A64FBF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B030D9532AFACDD300173536 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		B030D9552AFAD03800173536 /* WorkoutDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDiaryViewController.swift; sourceTree = "<group>"; };
 		B04900F72AEAA1AA001AA08A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B04900F92AEAA1B9001AA08A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B04900FC2AEAA268001AA08A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		B04901082AEAFCD1001AA08A /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
-		B0D1E0162AF7078C00E1B133 /* EdamamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamService.swift; sourceTree = "<group>"; };
 		B0D1E0192AF7086400E1B133 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
-		B0D261092AF552290001A2B1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C3A254C12AE3585F00746AC4 /* GainzTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GainzTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A254C42AE3585F00746AC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3A254C62AE3585F00746AC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +50,9 @@
 		C3CCF43B2AF8276200A48E51 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		C3CCF43E2AF85F0D00A48E51 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		C3CCF4402AFB4FF500A48E51 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		C3CCF4422AFC6F1700A48E51 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C3CCF4442AFC773A00A48E51 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		C3CCF4462AFC774500A48E51 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,18 +92,10 @@
 		B04901042AEAFC8D001AA08A /* Search Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				B04901082AEAFCD1001AA08A /* WorkoutViewController.swift */,
-				B0D261092AF552290001A2B1 /* SearchViewController.swift */,
+				C3CCF4442AFC773A00A48E51 /* FoodViewController.swift */,
+				C3CCF4462AFC774500A48E51 /* WorkoutViewController.swift */,
 			);
 			path = "Search Tabs";
-			sourceTree = "<group>";
-		};
-		B049010A2AEB0046001AA08A /* APIs */ = {
-			isa = PBXGroup;
-			children = (
-				B0D1E0162AF7078C00E1B133 /* EdamamService.swift */,
-			);
-			path = APIs;
 			sourceTree = "<group>";
 		};
 		B049010F2AEBC822001AA08A /* Cells */ = {
@@ -136,13 +128,13 @@
 			children = (
 				C3A254C42AE3585F00746AC4 /* AppDelegate.swift */,
 				C3A254C62AE3585F00746AC4 /* SceneDelegate.swift */,
-				B049010A2AEB0046001AA08A /* APIs */,
 				B04900F62AEAA15E001AA08A /* Login */,
 				B04900FB2AEAA25A001AA08A /* Models */,
 				B049010F2AEBC822001AA08A /* Cells */,
 				B04901042AEAFC8D001AA08A /* Search Tabs */,
 				C3CCF43D2AF8359D00A48E51 /* Learning Tabs */,
-				B01444A42AF4776300A64FBF /* HomeViewController.swift */,
+				B01444A42AF4776300A64FBF /* ProfileViewController.swift */,
+				C3CCF4422AFC6F1700A48E51 /* HomeViewController.swift */,
 				C3A254CA2AE3585F00746AC4 /* Main.storyboard */,
 				C3A254CD2AE3586000746AC4 /* Assets.xcassets */,
 				C3A254CF2AE3586000746AC4 /* LaunchScreen.storyboard */,
@@ -243,19 +235,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0D2610A2AF552290001A2B1 /* SearchViewController.swift in Sources */,
-				B04901092AEAFCD1001AA08A /* WorkoutViewController.swift in Sources */,
 				C3A254C52AE3585F00746AC4 /* AppDelegate.swift in Sources */,
-				B01444A52AF4776400A64FBF /* HomeViewController.swift in Sources */,
+				B01444A52AF4776400A64FBF /* ProfileViewController.swift in Sources */,
 				B04900FD2AEAA268001AA08A /* User.swift in Sources */,
+				C3CCF4432AFC6F1700A48E51 /* HomeViewController.swift in Sources */,
 				B04900F82AEAA1AA001AA08A /* SignUpViewController.swift in Sources */,
 				C3CCF43C2AF8276200A48E51 /* Recipe.swift in Sources */,
-				B0D1E0172AF7078C00E1B133 /* EdamamService.swift in Sources */,
 				B030D9562AFAD03800173536 /* WorkoutDiaryViewController.swift in Sources */,
 				B030D9542AFACDD300173536 /* ExerciseTableViewCell.swift in Sources */,
+				C3CCF4452AFC773A00A48E51 /* FoodViewController.swift in Sources */,
 				B04900FA2AEAA1B9001AA08A /* LoginViewController.swift in Sources */,
 				C3A254C72AE3585F00746AC4 /* SceneDelegate.swift in Sources */,
 				C3CCF43F2AF85F0D00A48E51 /* RecipesViewController.swift in Sources */,
+				C3CCF4472AFC774500A48E51 /* WorkoutViewController.swift in Sources */,
 				C3CCF4412AFB4FF500A48E51 /* RecipeDetailViewController.swift in Sources */,
 				B0D1E01A2AF7086400E1B133 /* RecipeCell.swift in Sources */,
 			);

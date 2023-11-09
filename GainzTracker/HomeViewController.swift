@@ -2,34 +2,28 @@
 //  HomeViewController.swift
 //  GainzTracker
 //
-//  Created by Abigail Johnson on 11/2/23.
+//  Created by Alberto Costa on 11/8/23.
 //
 
 import UIKit
-import ParseSwift
 
 class HomeViewController: UIViewController {
-    
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var heightLabel: UILabel!
-    @IBOutlet weak var weightLabel: UILabel!
-    @IBOutlet weak var weightGoalLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadUserData()
-        self.tabBarItem.title = "Home"
-        self.tabBarItem.image = UIImage(named: "house.fill_icon")
+
+        // Do any additional setup after loading the view.
     }
     
-    func loadUserData() {
-        if let currentUser = User.current {
-            usernameLabel.text = currentUser.username
-            emailLabel.text = currentUser.email
-            
-        }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
+    */
 
 }
