@@ -424,7 +424,7 @@
                                 <rect key="frame" x="45" y="109" width="303" height="533"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fixture.png" translatesAutoresizingMaskIntoConstraints="NO" id="m91-wH-KGY">
-                                        <rect key="frame" x="0.0" y="0.0" width="303" height="360"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="270"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obf-FJ-YEy" userLabel="RecipeLabel">
                                         <rect key="frame" x="101" y="512.66666666666663" width="101" height="20.333333333333371"/>
@@ -492,7 +492,7 @@
                                                     <rect key="frame" x="16" y="16" width="361" height="133"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="oqO-Ua-gHY">
-                                                            <rect key="frame" x="0.0" y="7.9999999999999929" width="112" height="117.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="7.9999999999999929" width="138" height="117.33333333333331"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcU-eS-2Yp">
                                                                     <rect key="frame" x="0.0" y="0.0" width="64.333333333333329" height="20.333333333333332"/>
@@ -521,22 +521,22 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sxf-Wv-CQq">
-                                                            <rect key="frame" x="246" y="28" width="115" height="77"/>
+                                                            <rect key="frame" x="272" y="28" width="89" height="77"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NumberSets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prV-wh-uxF">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="115" height="20.333333333333332"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NumSets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prV-wh-uxF">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="89" height="20.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NumberReps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zR-Rh-VoJ">
-                                                                    <rect key="frame" x="0.0" y="28.333333333333329" width="115" height="20.333333333333329"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NumReps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zR-Rh-VoJ">
+                                                                    <rect key="frame" x="0.0" y="28.333333333333329" width="89" height="20.333333333333329"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NumberWeight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqF-rD-WhD">
-                                                                    <rect key="frame" x="0.0" y="56.666666666666679" width="115" height="20.333333333333336"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NumWeight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqF-rD-WhD">
+                                                                    <rect key="frame" x="0.0" y="56.666666666666679" width="89" height="20.333333333333336"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -553,6 +553,12 @@
                                                 <constraint firstAttribute="bottom" secondItem="oBB-ip-qW5" secondAttribute="bottom" constant="16" id="WCJ-5I-Mgd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="hcU-eS-2Yp" id="gor-fT-PRJ"/>
+                                            <outlet property="repsLabel" destination="0zR-Rh-VoJ" id="25a-sp-QYy"/>
+                                            <outlet property="setsLabel" destination="prV-wh-uxF" id="dXB-rB-RwK"/>
+                                            <outlet property="weightLabel" destination="mqF-rD-WhD" id="Q7Y-U1-5vf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

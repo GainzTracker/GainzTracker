@@ -10,20 +10,19 @@ import UIKit
 class ExerciseTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var setsTextField: UITextField!
-    @IBOutlet weak var repsTextField: UITextField!
-    @IBOutlet weak var weightTextField: UITextField!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var setsLabel: UILabel!
+    @IBOutlet weak var repsLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
     
     // MARK: - Properties
-    var exercise: Exercise?
-    
-    func didSet() {
-        // Update the text fields when the exercise is set
-        nameTextField.text = exercise!.name
-        setsTextField.text = String(exercise!.sets)
-        repsTextField.text = String(exercise!.reps)
-        weightTextField.text = String(exercise!.weight)
+    var exercise: Exercise? {
+        didSet {
+            nameLabel.text = exercise?.name ?? "Workout"
+            setsLabel.text = exercise?.sets.description ?? "NumberSets"
+            repsLabel.text = exercise?.reps.description ?? "NumberReps"
+            weightLabel.text = exercise?.weight.description ?? "NumberWeight"
+        }
     }
 
     
@@ -34,41 +33,41 @@ class ExerciseTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    // MARK: - UITextFieldDelegate
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        //guard let exercise = exercise else { return }
-        /*
-        if textField == nameTextField {
-            self.exercise?.name = textField.text ?? ""
-        } else if textField == setsTextField {
-            self.exercise?.sets = Int(textField.text ?? "") ?? 0
-        } else if textField == repsTextField {
-            self.exercise?.reps = Int(textField.text ?? "") ?? 0
-        } else if textField == weightTextField {
-            self.exercise?.weight = Double(textField.text ?? "") ?? 0.0
-        }*/
-        print("hey")
-        /*if textField == nameTextField {
-            self.exercise?.name = textField.text ?? ""
-        } else if textField == setsTextField {
-            self.exercise?.sets = Int(textField.text ?? "") ?? 0
-        } else if textField == repsTextField {
-            self.exercise?.reps = Int(textField.text ?? "") ?? 0
-        } else if textField == weightTextField {
-            self.exercise?.weight = Double(textField.text ?? "") ?? 0.0
-        }*/
-
-        onExerciseUpdated?(exercise!)
-    }
-    
-    func configue(with exercise: Exercise) {
-        nameTextField.text = exercise.name
-        setsTextField.text = String(exercise.sets)
-        repsTextField.text = String(exercise.reps)
-        weightTextField.text = String(exercise.weight)
-        
-        //loading picture
-        //NukeUI.loadImage(with: recipe.image, into: RecipePicture)
-        
-    }
+//    // MARK: - UITextFieldDelegate
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        //guard let exercise = exercise else { return }
+//        /*
+//        if textField == nameTextField {
+//            self.exercise?.name = textField.text ?? ""
+//        } else if textField == setsTextField {
+//            self.exercise?.sets = Int(textField.text ?? "") ?? 0
+//        } else if textField == repsTextField {
+//            self.exercise?.reps = Int(textField.text ?? "") ?? 0
+//        } else if textField == weightTextField {
+//            self.exercise?.weight = Double(textField.text ?? "") ?? 0.0
+//        }*/
+//        print("hey")
+//        /*if textField == nameTextField {
+//            self.exercise?.name = textField.text ?? ""
+//        } else if textField == setsTextField {
+//            self.exercise?.sets = Int(textField.text ?? "") ?? 0
+//        } else if textField == repsTextField {
+//            self.exercise?.reps = Int(textField.text ?? "") ?? 0
+//        } else if textField == weightTextField {
+//            self.exercise?.weight = Double(textField.text ?? "") ?? 0.0
+//        }*/
+//
+//        onExerciseUpdated?(exercise!)
+//    }
+//    
+//    func configue(with exercise: Exercise) {
+//        nameTextField.text = exercise.name
+//        setsTextField.text = String(exercise.sets)
+//        repsTextField.text = String(exercise.reps)
+//        weightTextField.text = String(exercise.weight)
+//        
+//        //loading picture
+//        //NukeUI.loadImage(with: recipe.image, into: RecipePicture)
+//        
+//    }
 }
