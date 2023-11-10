@@ -7,14 +7,7 @@
 
 import UIKit
 
-struct Exercise {
-    var name: String
-    var sets: Int
-    var reps: Int
-    var weight: Double
-}
-
-class ExerciseTableViewCell: UITableViewCell, UITextFieldDelegate {
+class ExerciseTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlets
     @IBOutlet weak var nameTextField: UITextField!
@@ -23,14 +16,14 @@ class ExerciseTableViewCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var weightTextField: UITextField!
     
     // MARK: - Properties
-    var exercise: Exercise? {
-        didSet {
-            // Update the text fields when the exercise is set
-            nameTextField.text = exercise?.name
-            setsTextField.text = "\(exercise?.sets ?? 0)"
-            repsTextField.text = "\(exercise?.reps ?? 0)"
-            weightTextField.text = "\(exercise?.weight ?? 0.0)"
-        }
+    var exercise: Exercise?
+    
+    func didSet() {
+        // Update the text fields when the exercise is set
+        nameTextField.text = exercise!.name
+        setsTextField.text = String(exercise!.sets)
+        repsTextField.text = String(exercise!.reps)
+        weightTextField.text = String(exercise!.weight)
     }
 
     
@@ -39,17 +32,12 @@ class ExerciseTableViewCell: UITableViewCell, UITextFieldDelegate {
     // MARK: - View Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Set the delegate for text fields
-        nameTextField.delegate = self
-        setsTextField.delegate = self
-        repsTextField.delegate = self
-        weightTextField.delegate = self
     }
     
     // MARK: - UITextFieldDelegate
     func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let exercise = exercise else { return }
-
+        //guard let exercise = exercise else { return }
+        /*
         if textField == nameTextField {
             self.exercise?.name = textField.text ?? ""
         } else if textField == setsTextField {
@@ -58,9 +46,29 @@ class ExerciseTableViewCell: UITableViewCell, UITextFieldDelegate {
             self.exercise?.reps = Int(textField.text ?? "") ?? 0
         } else if textField == weightTextField {
             self.exercise?.weight = Double(textField.text ?? "") ?? 0.0
-        }
+        }*/
+        print("hey")
+        /*if textField == nameTextField {
+            self.exercise?.name = textField.text ?? ""
+        } else if textField == setsTextField {
+            self.exercise?.sets = Int(textField.text ?? "") ?? 0
+        } else if textField == repsTextField {
+            self.exercise?.reps = Int(textField.text ?? "") ?? 0
+        } else if textField == weightTextField {
+            self.exercise?.weight = Double(textField.text ?? "") ?? 0.0
+        }*/
 
-        onExerciseUpdated?(exercise)
+        onExerciseUpdated?(exercise!)
     }
     
+    func configue(with exercise: Exercise) {
+        nameTextField.text = exercise.name
+        setsTextField.text = String(exercise.sets)
+        repsTextField.text = String(exercise.reps)
+        weightTextField.text = String(exercise.weight)
+        
+        //loading picture
+        //NukeUI.loadImage(with: recipe.image, into: RecipePicture)
+        
+    }
 }

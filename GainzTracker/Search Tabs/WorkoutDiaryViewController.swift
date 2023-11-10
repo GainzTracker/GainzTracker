@@ -11,7 +11,7 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
 
     @IBOutlet weak var tableView: UITableView! 
 
-    var exercises: [Exercise] = [Exercise(name: "Push Up", sets: 3, reps: 12, weight: 0.0)]
+    var exercises: [Exercise] = []
     
 
     override func viewDidLoad() {
@@ -88,12 +88,15 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
         }
 
         let exercise = exercises[indexPath.row]
-        cell.nameTextField.text = exercise.name
+        /*cell.nameTextField.text = exercise.name
         cell.setsTextField.text = "\(exercise.sets)"
         cell.repsTextField.text = "\(exercise.reps)"
         cell.weightTextField.text = "\(exercise.weight)"
-        cell.exercise = exercise
+        cell.exercise = exercise*/
+        
+        cell.configue(with: exercise)
 
+        print("here")
         // Set the closure to handle updates from the cell
         cell.onExerciseUpdated = { [weak self] updatedExercise in
             guard let strongSelf = self else { return }
@@ -103,5 +106,21 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
 
         return cell
     }
+
+    /*func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        // Get a cell with identifier, "TrackCell"
+        // the `dequeueReusableCell(withIdentifier:)` method just returns a generic UITableViewCell so it's necessary to cast it to our specific custom cell.
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as! RecipeCell
+
+        // Get the track that corresponds to the table view row
+        let recipe = recipes[indexPath.row]
+
+        // Configure the cell with it's associated track
+        cell.configue(with: recipe)
+
+        // return the cell for display in the table view
+        return cell
+    }*/
 
 }

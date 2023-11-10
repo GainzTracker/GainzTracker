@@ -54,7 +54,7 @@ class RecipesViewController: UIViewController, UITableViewDataSource {
                 let hits = response.hits
                 print(hits)
                 let recipes = hits[0]
-                print
+            
                 
                 print("✅ recipes are here")
                 
@@ -117,7 +117,7 @@ class RecipesViewController: UIViewController, UITableViewDataSource {
 
         // Get a cell with identifier, "TrackCell"
         // the `dequeueReusableCell(withIdentifier:)` method just returns a generic UITableViewCell so it's necessary to cast it to our specific custom cell.
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as! RecipeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as! RecipeCell
 
         // Get the track that corresponds to the table view row
         let recipe = recipes[indexPath.row]

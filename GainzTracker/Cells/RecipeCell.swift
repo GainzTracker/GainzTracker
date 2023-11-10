@@ -9,7 +9,7 @@ import UIKit
 import Nuke
 
 
-class RecipeTableViewCell: UITableViewCell {
+class RecipeCell: UITableViewCell {
     
     @IBOutlet weak var RecipeTitle: UILabel!
     @IBOutlet weak var RecipeCalories: UILabel!
@@ -28,7 +28,7 @@ class RecipeTableViewCell: UITableViewCell {
     
     func configue(with recipe: Recipe) {
         RecipeTitle.text = recipe.label
-        RecipeCalories.text = String( recipe.calories)
+        RecipeCalories.text = String(recipe.calories)
         RecipeMeal.text = recipe.mealType
         
         //loading picture
