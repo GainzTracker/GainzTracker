@@ -23,6 +23,7 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
     
     private func setupNavigationBar() {
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addExercise))
+        addButton.tintColor = UIColor.yellow
         navigationItem.rightBarButtonItem = addButton
     }
     
