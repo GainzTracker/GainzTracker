@@ -8,7 +8,7 @@
 import UIKit
 import Nuke
 
-class RecipesViewController: UITableViewController {
+class RecipesViewController: UIViewController, UITableViewDataSource {
     
     var recipes: [Recipe] = []
     
@@ -43,12 +43,18 @@ class RecipesViewController: UITableViewController {
                 // Create a JSON Decoder
                 let decoder = JSONDecoder()
 
+                print("aqui")
                 // Use the JSON decoder to try and map the data to our custom model.
                 // TrackResponse.self is a reference to the type itself, tells the decoder what to map to.
                 let response = try decoder.decode(RecipesResponse.self, from: data)
+                print("aqui x2")
 
+                
                 // Access the array of tracks from the `results` property
-                let recipes = response.callResults
+                let hits = response.hits
+                print(hits)
+                let recipes = hits[0]
+                print
                 
                 print("✅ recipes are here")
                 
@@ -56,7 +62,7 @@ class RecipesViewController: UITableViewController {
                 DispatchQueue.main.async {
 
                     // Set the view controller's tracks property as this is the one the table view references
-                    self?.recipes = recipes
+                    //self?.recipes = recipes
 
                     // Make the table view reload now that we have new data
                     self?.recipeTable.reloadData()
@@ -103,11 +109,11 @@ class RecipesViewController: UITableViewController {
         }
     }
         
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         // Get a cell with identifier, "TrackCell"
         // the `dequeueReusableCell(withIdentifier:)` method just returns a generic UITableViewCell so it's necessary to cast it to our specific custom cell.

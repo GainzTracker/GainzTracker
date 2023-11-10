@@ -18,6 +18,11 @@ struct Recipe: Decodable {
 }
 
 struct RecipesResponse: Decodable {
-    var callResults: [Recipe] = []
+    var hits: [Hits] = []
+}
+
+struct Hits: Decodable {
+    var recipe: [Recipe] = []
+    var _links: [String?] = []
 }
 
