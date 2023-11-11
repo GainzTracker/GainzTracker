@@ -12,4 +12,5 @@ struct Exercise {
     let sets: Int
     let reps: Int
     let weight: Double
+    let time: Double
 }
