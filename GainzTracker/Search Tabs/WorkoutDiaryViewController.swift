@@ -68,6 +68,7 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
             
             let newExercise = Exercise(name: name, sets: setsInt, reps: repsInt, weight: weightDouble, time: workoutTimeDouble)
             strongSelf.exercises.append(newExercise)
+            strongSelf.updateTotalWorkoutTime(with: workoutTimeDouble)
             strongSelf.tableView.reloadData()
             
         }
@@ -81,7 +82,13 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
         
     }
     
-    // UITableViewDataSource Methods
+    func updateTotalWorkoutTime(with minutes: Double) {
+        let currentTotalTime = UserDefaults.standard.double(forKey: "totalWorkoutTime")
+        let newTotalTime = currentTotalTime + minutes
+        UserDefaults.standard.set(newTotalTime, forKey: "totalWorkoutTime")
+    }
+    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

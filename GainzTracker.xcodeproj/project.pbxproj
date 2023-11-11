@@ -17,6 +17,7 @@
 		B04901162AEBC8C9001AA08A /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = B04901152AEBC8C9001AA08A /* NukeExtensions */; };
 		B04901182AEBC8C9001AA08A /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = B04901172AEBC8C9001AA08A /* NukeUI */; };
 		B049011A2AEBC8C9001AA08A /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = B04901192AEBC8C9001AA08A /* NukeVideo */; };
+		B08CD60C2AFFF0C700E40A64 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08CD60B2AFFF0C700E40A64 /* HomeViewController.swift */; };
 		B0D1E01A2AF7086400E1B133 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D1E0192AF7086400E1B133 /* RecipeCell.swift */; };
 		C3A254C52AE3585F00746AC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C42AE3585F00746AC4 /* AppDelegate.swift */; };
 		C3A254C72AE3585F00746AC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C62AE3585F00746AC4 /* SceneDelegate.swift */; };
@@ -36,6 +37,7 @@
 		B04900F72AEAA1AA001AA08A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B04900F92AEAA1B9001AA08A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B04900FC2AEAA268001AA08A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B08CD60B2AFFF0C700E40A64 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B0D1E0192AF7086400E1B133 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		C3A254C12AE3585F00746AC4 /* GainzTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GainzTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A254C42AE3585F00746AC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				C3CCF43E2AF85F0D00A48E51 /* RecipesViewController.swift */,
 				C3CCF4402AFB4FF500A48E51 /* RecipeDetailViewController.swift */,
+				B08CD60B2AFFF0C700E40A64 /* HomeViewController.swift */,
 			);
 			path = "Learning Tabs";
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				B04900F82AEAA1AA001AA08A /* SignUpViewController.swift in Sources */,
 				C3CCF43C2AF8276200A48E51 /* Recipe.swift in Sources */,
 				B030D9562AFAD03800173536 /* WorkoutDiaryViewController.swift in Sources */,
+				B08CD60C2AFFF0C700E40A64 /* HomeViewController.swift in Sources */,
 				B030D9542AFACDD300173536 /* ExerciseTableViewCell.swift in Sources */,
 				C3CCF4452AFC773A00A48E51 /* FoodViewController.swift in Sources */,
 				B04900FA2AEAA1B9001AA08A /* LoginViewController.swift in Sources */,

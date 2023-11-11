@@ -287,10 +287,13 @@
                                         <rect key="frame" x="0.0" y="182.66666666666669" width="317" height="4"/>
                                     </progressView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="D4E-AP-Kcf" firstAttribute="trailing" secondItem="8S2-s7-EmV" secondAttribute="trailingMargin" id="1mH-UC-34M"/>
+                                    <constraint firstItem="D4E-AP-Kcf" firstAttribute="trailing" secondItem="ara-eU-yFU" secondAttribute="trailing" id="g0g-0w-plU"/>
+                                </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEi-W5-ofi">
-                                <rect key="frame" x="302" y="42" width="61" height="20.333333333333329"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEi-W5-ofi">
+                                <rect key="frame" x="302" y="42" width="60.666666666666686" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -300,12 +303,20 @@
                         <color key="backgroundColor" red="0.66080622720000004" green="0.47277707050000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="8S2-s7-EmV" firstAttribute="leading" secondItem="pa3-Sl-sgm" secondAttribute="leading" constant="16" id="4lz-Nm-hYV"/>
+                            <constraint firstItem="eEi-W5-ofi" firstAttribute="top" secondItem="yzZ-F6-kPC" secondAttribute="topMargin" constant="-61" id="K6n-wo-kEv"/>
                             <constraint firstItem="pa3-Sl-sgm" firstAttribute="trailing" secondItem="8S2-s7-EmV" secondAttribute="trailing" constant="60" id="WoA-Qx-rkN"/>
+                            <constraint firstItem="eEi-W5-ofi" firstAttribute="leading" secondItem="yzZ-F6-kPC" secondAttribute="leading" constant="302" id="ajF-wq-nqC"/>
+                            <constraint firstItem="8S2-s7-EmV" firstAttribute="top" secondItem="eEi-W5-ofi" secondAttribute="bottom" constant="56.000000000000014" id="iaw-Iv-7gU"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="eEi-W5-ofi" secondAttribute="trailing" id="lLt-7t-FRq"/>
                             <constraint firstItem="pa3-Sl-sgm" firstAttribute="bottom" secondItem="8S2-s7-EmV" secondAttribute="bottom" constant="464" id="puT-BG-rGU"/>
                             <constraint firstItem="8S2-s7-EmV" firstAttribute="top" secondItem="pa3-Sl-sgm" secondAttribute="top" constant="15.33" id="sk7-3O-2hK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Qfv-XG-ZV0"/>
+                    <connections>
+                        <outlet property="calorieProgressBar" destination="8S2-s7-EmV" id="FuK-Ia-h3M"/>
+                        <outlet property="workoutProgressBar" destination="ara-eU-yFU" id="gs5-JR-YIZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMC-s1-M2G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -429,7 +440,7 @@
                                 <rect key="frame" x="45" y="109" width="303" height="533"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fixture.png" translatesAutoresizingMaskIntoConstraints="NO" id="m91-wH-KGY">
-                                        <rect key="frame" x="0.0" y="0.0" width="303" height="270"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="360"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obf-FJ-YEy" userLabel="RecipeLabel">
                                         <rect key="frame" x="101" y="512.66666666666663" width="101" height="20.333333333333371"/>
