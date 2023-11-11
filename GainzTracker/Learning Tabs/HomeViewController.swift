@@ -17,42 +17,25 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var goalTimeLabel: UILabel!
     
-    var totalWorkoutTime: Double {
-        get {
-            return UserDefaults.standard.double(forKey: "totalWorkoutTime")
-        }
-        set {
-            UserDefaults.standard.set(newValue, forKey: "totalWorkoutTime")
-            updateProgressBar()
-        }
-    }
-    
-    let arbitraryGoalTime: Double = 120.0
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupProgressBar()
-        }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        updateProgressBar()
     }
 
-    
-    func setupProgressBar() {
-        workoutProgressBar.progressTintColor = .orange
-        workoutProgressBar.trackTintColor = .lightGray
-        updateProgressBar()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let currentTotalTime = UserDefaults.standard.double(forKey: "totalWorkoutTime")
+        let goalTime = UserDefaults.standard.double(forKey: "goalWorkoutTime")
+
+        updateProgressBar(with: currentTotalTime, goal: goalTime)
+        
+        currentTimeLabel.text = "\(Int(currentTotalTime)) mins"
+        goalTimeLabel.text = "\(Int(goalTime)) mins"
     }
-    
-    func updateProgressBar() {
-        let progress = Float(totalWorkoutTime / arbitraryGoalTime)
+
+    func updateProgressBar(with currentTime: Double, goal: Double) {
+        let progress = Float(currentTime / goal)
         workoutProgressBar.setProgress(progress, animated: true)
     }
     
-    func addUserWorkoutTime(minutes: Double) {
-        // Add the new workout time to the total
-        totalWorkoutTime += minutes
-    }
 }
