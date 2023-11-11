@@ -40,22 +40,26 @@ class RecipesViewController: UIViewController, UITableViewDataSource {
 
             // do statement
             do {
+                
                 // Create a JSON Decoder
                 let decoder = JSONDecoder()
 
-                print("aqui")
+                print("here")
                 // Use the JSON decoder to try and map the data to our custom model.
                 // TrackResponse.self is a reference to the type itself, tells the decoder what to map to.
                 let response = try decoder.decode(RecipesResponse.self, from: data)
-                print("aqui x2")
+                print("here x2")
 
                 
                 // Access the array of tracks from the `results` property
                 let hits = response.hits
                 print(hits)
-                let recipes = hits[0]
+                //let recipes = hits[0]
             
                 
+                //var dict = try JSONSerialization.jsonObject(with: data) as? [String: Any]
+                //print(dict?.keys as Any)
+
                 print("✅ recipes are here")
                 
                 // Execute UI updates on the main thread when calling from a background callback

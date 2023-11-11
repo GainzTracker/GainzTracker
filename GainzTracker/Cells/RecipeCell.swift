@@ -27,9 +27,9 @@ class RecipeCell: UITableViewCell {
     }
     
     func configue(with recipe: Recipe) {
-        RecipeTitle.text = recipe.label
-        RecipeCalories.text = String(recipe.calories)
-        RecipeMeal.text = recipe.mealType
+        //RecipeTitle.text = recipe.label
+        //RecipeCalories.text = String(recipe.calories)
+        //RecipeMeal.text = recipe.mealType.
         
         //loading picture
         //NukeUI.loadImage(with: recipe.image, into: RecipePicture)

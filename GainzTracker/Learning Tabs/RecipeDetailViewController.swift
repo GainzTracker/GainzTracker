@@ -20,7 +20,7 @@ class RecipeDetailViewController: UIViewController {
         
         //Nuke.loadImage(with: track.artworkUrl100, into: backdrop)
         
-        RecipeLabel.text = recipe.label
+        //RecipeLabel.text = recipe.label
         //escText.text = track.primaryGenreName
     }
 

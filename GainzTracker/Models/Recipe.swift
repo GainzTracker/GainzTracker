@@ -8,21 +8,26 @@
 import Foundation
 
 struct Recipe: Decodable {
-    let label: String
-    let image: URL
-    let url: URL
-    let calories: Double
-    let cuisineType: String
-    let mealType: String
-    let ingredientLines: [String]
+    let label: String?
+    let image: String?
+    let url: String?
+    let ingredientLines: [String?]
+    let calories: Double?
+    let cuisineType: [String]
+    let mealType: [String]
+    
+}
+
+struct Links: Decodable {
+    
 }
 
 struct RecipesResponse: Decodable {
-    var hits: [Hits] = []
+    var hits: [Hit?] = []
 }
 
-struct Hits: Decodable {
-    var recipe: [Recipe] = []
-    var _links: [String?] = []
+struct Hit: Decodable {
+    var recipe: Recipe?
+    var _links: Links?
 }
 
