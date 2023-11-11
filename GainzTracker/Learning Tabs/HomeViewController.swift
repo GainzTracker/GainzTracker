@@ -12,6 +12,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var calorieProgressBar: UIStackView!
     @IBOutlet weak var workoutProgressBar: UIProgressView!
     
+    @IBOutlet weak var currentCalLabel: UILabel!
+    @IBOutlet weak var goalCalLabel: UILabel!
+    @IBOutlet weak var currentTimeLabel: UILabel!
+    @IBOutlet weak var goalTimeLabel: UILabel!
+    
     var totalWorkoutTime: Double {
         get {
             return UserDefaults.standard.double(forKey: "totalWorkoutTime")

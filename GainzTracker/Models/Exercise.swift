@@ -13,4 +13,5 @@ struct Exercise {
     let reps: Int
     let weight: Double
     let time: Double
+    let goal: Double
 }

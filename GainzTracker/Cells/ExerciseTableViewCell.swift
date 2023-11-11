@@ -14,7 +14,6 @@ class ExerciseTableViewCell: UITableViewCell {
     @IBOutlet weak var setsLabel: UILabel!
     @IBOutlet weak var repsLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
-    @IBOutlet weak var workoutTimeLabel: UILabel!
     
     // MARK: - Properties
     var exercise: Exercise? {
@@ -23,7 +22,6 @@ class ExerciseTableViewCell: UITableViewCell {
             setsLabel.text = exercise?.sets.description ?? "NumberSets"
             repsLabel.text = exercise?.reps.description ?? "NumberReps"
             weightLabel.text = exercise?.weight.description ?? "NumberWeight"
-            workoutTimeLabel.text = exercise?.time.description ?? "WorkoutTime"
         }
     }
 

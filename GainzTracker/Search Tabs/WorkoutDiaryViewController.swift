@@ -48,6 +48,10 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
             textField.placeholder = "Workout Time (Double)"
             textField.keyboardType = .decimalPad
         }
+        alert.addTextField { textField in
+            textField.placeholder = "Goal Time (Double)"
+            textField.keyboardType = .decimalPad
+        }
         let addAction = UIAlertAction(title: "Add", style: .default) { [weak self] _ in
             guard let strongSelf = self,
                   let name = alert.textFields?[0].text,
@@ -55,18 +59,15 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
                   let reps = alert.textFields?[2].text,
                   let weight = alert.textFields?[3].text,
                   let time = alert.textFields?[4].text,
+                  let goal = alert.textFields?[5].text,
                   let setsInt = Int(sets),
                   let repsInt = Int(reps),
                   let weightDouble = Double(weight),
-                  let workoutTimeDouble = Double(time) else { return }
+                  let workoutTimeDouble = Double(time),
+                  let goalTimeDouble = Double(goal) else { return }
+    
             
-            print("Name: \(name)")
-            print("Sets: \(setsInt)")
-            print("Reps: \(repsInt)")
-            print("Weight: \(weightDouble)")
-            print("Workout Time: \(workoutTimeDouble)")
-            
-            let newExercise = Exercise(name: name, sets: setsInt, reps: repsInt, weight: weightDouble, time: workoutTimeDouble)
+            let newExercise = Exercise(name: name, sets: setsInt, reps: repsInt, weight: weightDouble, time: workoutTimeDouble, goal: goalTimeDouble)
             strongSelf.exercises.append(newExercise)
             strongSelf.updateTotalWorkoutTime(with: workoutTimeDouble)
             strongSelf.tableView.reloadData()
