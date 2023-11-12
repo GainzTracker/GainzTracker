@@ -9,50 +9,45 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var calorieProgressBar: UIStackView!
+
     @IBOutlet weak var workoutProgressBar: UIProgressView!
+    @IBOutlet weak var calorieProgressBar: UIProgressView!
     
     @IBOutlet weak var currentCalLabel: UILabel!
     @IBOutlet weak var goalCalLabel: UILabel!
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var goalTimeLabel: UILabel!
     
-    var totalWorkoutTime: Double {
-        get {
-            return UserDefaults.standard.double(forKey: "totalWorkoutTime")
-        }
-        set {
-            UserDefaults.standard.set(newValue, forKey: "totalWorkoutTime")
-            updateProgressBar()
-        }
-    }
-    
-    let arbitraryGoalTime: Double = 120.0
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupProgressBar()
-        }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        updateProgressBar()
+        // Initial setup if needed
     }
 
-    
-    func setupProgressBar() {
-        workoutProgressBar.progressTintColor = .orange
-        workoutProgressBar.trackTintColor = .lightGray
-        updateProgressBar()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let currentTotalTime = UserDefaults.standard.double(forKey: "totalWorkoutTime")
+        let goalTime = UserDefaults.standard.double(forKey: "goalWorkoutTime")
+        let currentTotalCalories = UserDefaults.standard.double(forKey: "totalCalories")
+        let goalCalories = UserDefaults.standard.double(forKey: "goalCalories")
+
+        updateWorkoutProgressBar(with: currentTotalTime, goal: goalTime)
+        updateCalorieProgressBar(with: currentTotalCalories, goal: goalCalories)
+
+        currentTimeLabel.text = "\(Int(currentTotalTime)) mins"
+        goalTimeLabel.text = "\(Int(goalTime)) mins"
+
+        currentCalLabel.text = "\(Int(currentTotalCalories)) Cal"
+        goalCalLabel.text = "\(Int(goalCalories)) Cal"
     }
-    
-    func updateProgressBar() {
-        let progress = Float(totalWorkoutTime / arbitraryGoalTime)
+
+    func updateWorkoutProgressBar(with currentTime: Double, goal: Double) {
+        let progress = Float(currentTime / goal)
         workoutProgressBar.setProgress(progress, animated: true)
     }
     
-    func addUserWorkoutTime(minutes: Double) {
-        // Add the new workout time to the total
-        totalWorkoutTime += minutes
+    func updateCalorieProgressBar(with currentCalories: Double, goal: Double) {
+        let progress = Float(currentCalories / goal)
+        calorieProgressBar.setProgress(progress, animated: true)
     }
 }

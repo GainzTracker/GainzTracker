@@ -45,16 +45,15 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
             textField.keyboardType = .decimalPad
         }
         alert.addTextField { textField in
-            textField.placeholder = "Workout Time (Double)"
+            textField.placeholder = "Workout Time (See Home Tab)"
             textField.keyboardType = .decimalPad
         }
         alert.addTextField { textField in
-            textField.placeholder = "Goal Time (Double)"
+            textField.placeholder = "Goal Time (See Home Tab)"
             textField.keyboardType = .decimalPad
         }
         let addAction = UIAlertAction(title: "Add", style: .default) { [weak self] _ in
-            guard let strongSelf = self,
-                  let name = alert.textFields?[0].text,
+            guard let name = alert.textFields?[0].text,
                   let sets = alert.textFields?[1].text,
                   let reps = alert.textFields?[2].text,
                   let weight = alert.textFields?[3].text,
@@ -65,22 +64,25 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
                   let weightDouble = Double(weight),
                   let workoutTimeDouble = Double(time),
                   let goalTimeDouble = Double(goal) else { return }
-    
-            
+
             let newExercise = Exercise(name: name, sets: setsInt, reps: repsInt, weight: weightDouble, time: workoutTimeDouble, goal: goalTimeDouble)
-            strongSelf.exercises.append(newExercise)
-            strongSelf.updateTotalWorkoutTime(with: workoutTimeDouble)
-            strongSelf.tableView.reloadData()
-            
+
+            self?.exercises.append(newExercise)
+
+            let currentTotalTime = UserDefaults.standard.double(forKey: "totalWorkoutTime")
+            let newTotalTime = currentTotalTime + workoutTimeDouble
+            UserDefaults.standard.set(newTotalTime, forKey: "totalWorkoutTime")
+
+            UserDefaults.standard.set(goalTimeDouble, forKey: "goalWorkoutTime")
+
+            self?.tableView.reloadData()
         }
+
         alert.addAction(addAction)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(cancelAction)
         
         present(alert, animated: true, completion: nil)
-        
-        
-        
     }
     
     func updateTotalWorkoutTime(with minutes: Double) {
