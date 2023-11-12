@@ -27,16 +27,16 @@ class RecipeCell: UITableViewCell {
     }
     
     func configue(with recipe: Recipe) {
-        //RecipeTitle.text = recipe.label
-        //RecipeCalories.text = String(recipe.calories)
-        //RecipeMeal.text = recipe.mealType.
+        RecipeTitle.text = recipe.label
+        RecipeCalories.text = String(recipe.calories)
+        var types:String = ""
+        for type in recipe.mealType{
+            types += type
+        }
+        RecipeMeal.text = types
         
         //loading picture
-        //NukeUI.loadImage(with: recipe.image, into: RecipePicture)
-        
+        let url:URL = URL(string: recipe.image)!
+        //Nuke.loadImage(with: url, into: RecipePicture.image)
+        //RecipePicture.loadurl(url: url!)
     }
-    
-    
-    
-    
-}
