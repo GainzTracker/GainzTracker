@@ -22,7 +22,7 @@ class RecipeCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -40,3 +40,21 @@ class RecipeCell: UITableViewCell {
         //Nuke.loadImage(with: url, into: RecipePicture.image)
         //RecipePicture.loadurl(url: url!)
     }
+    
+    
+    func loadurl(url: URL) {
+                DispatchQueue.global().async { [weak self] in
+                    if let data = try? Data(contentsOf: url) {
+                        if let image = UIImage(data: data) {
+                            DispatchQueue.main.async {
+                                //self?.image = image
+                            }
+                        }
+                    }
+                }
+            }
+        
+        
+    }
+    
+    
