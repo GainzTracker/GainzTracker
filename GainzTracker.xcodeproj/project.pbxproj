@@ -18,6 +18,8 @@
 		B04901182AEBC8C9001AA08A /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = B04901172AEBC8C9001AA08A /* NukeUI */; };
 		B049011A2AEBC8C9001AA08A /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = B04901192AEBC8C9001AA08A /* NukeVideo */; };
 		B08CD60C2AFFF0C700E40A64 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08CD60B2AFFF0C700E40A64 /* HomeViewController.swift */; };
+		B0B609992B00DDAE0077EC8A /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B609982B00DDAE0077EC8A /* Food.swift */; };
+		B0B6099B2B00DE830077EC8A /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B6099A2B00DE830077EC8A /* FoodTableViewCell.swift */; };
 		B0D1E01A2AF7086400E1B133 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D1E0192AF7086400E1B133 /* RecipeCell.swift */; };
 		C3A254C52AE3585F00746AC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C42AE3585F00746AC4 /* AppDelegate.swift */; };
 		C3A254C72AE3585F00746AC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C62AE3585F00746AC4 /* SceneDelegate.swift */; };
@@ -38,6 +40,8 @@
 		B04900F92AEAA1B9001AA08A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B04900FC2AEAA268001AA08A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B08CD60B2AFFF0C700E40A64 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B0B609982B00DDAE0077EC8A /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		B0B6099A2B00DE830077EC8A /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		B0D1E0192AF7086400E1B133 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		C3A254C12AE3585F00746AC4 /* GainzTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GainzTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A254C42AE3585F00746AC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 				B04900FC2AEAA268001AA08A /* User.swift */,
 				C3CCF43B2AF8276200A48E51 /* Recipe.swift */,
 				C3CCF4482AFEA45000A48E51 /* Exercise.swift */,
+				B0B609982B00DDAE0077EC8A /* Food.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 			children = (
 				B0D1E0192AF7086400E1B133 /* RecipeCell.swift */,
 				B030D9532AFACDD300173536 /* ExerciseTableViewCell.swift */,
+				B0B6099A2B00DE830077EC8A /* FoodTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -234,6 +240,7 @@
 			files = (
 				C3A254C52AE3585F00746AC4 /* AppDelegate.swift in Sources */,
 				B04900FD2AEAA268001AA08A /* User.swift in Sources */,
+				B0B609992B00DDAE0077EC8A /* Food.swift in Sources */,
 				B04900F82AEAA1AA001AA08A /* SignUpViewController.swift in Sources */,
 				C3CCF43C2AF8276200A48E51 /* Recipe.swift in Sources */,
 				B030D9562AFAD03800173536 /* WorkoutDiaryViewController.swift in Sources */,
@@ -244,6 +251,7 @@
 				C3A254C72AE3585F00746AC4 /* SceneDelegate.swift in Sources */,
 				C3CCF4492AFEA45100A48E51 /* Exercise.swift in Sources */,
 				C3CCF43F2AF85F0D00A48E51 /* RecipesViewController.swift in Sources */,
+				B0B6099B2B00DE830077EC8A /* FoodTableViewCell.swift in Sources */,
 				C3CCF4412AFB4FF500A48E51 /* RecipeDetailViewController.swift in Sources */,
 				B0D1E01A2AF7086400E1B133 /* RecipeCell.swift in Sources */,
 			);
