@@ -13,6 +13,4 @@ struct Food {
     let numCalOne: Int
     let itemTwo: String
     let numCalTwo: Int
-    let calTotal: Int
-    let calGoal: Int
 }
