@@ -53,12 +53,26 @@ class RecipesViewController: UIViewController, UITableViewDataSource {
                 
                 // Access the array of tracks from the `results` property
                 let hits = response.hits
-                print(hits)
-                //let recipes = hits[0]
-            
+                print(hits.first)
+                //let recipes = hits.Recipe as? Recipe
+                print(hits.recipe.label)
                 
+                do {
+                    for hit in hits {
+                        // Access the 'recipe' object within each hit
+                        if let recipes = hits[hit] as? Recipe {
+                            // Access the 'calories' value within each recipe
+                            if let calories = recipes.recipe["calories"] as? Double {
+                                // Print or use the calories value as needed
+                                print(calories)
+                            }
+                        }
+                    }
+                } catch {
+                    print("Error deserializing JSON: \(error)")
+                }
+            
                 //var dict = try JSONSerialization.jsonObject(with: data) as? [String: Any]
-                //print(dict?.keys as Any)
 
                 print("✅ recipes are here")
                 
