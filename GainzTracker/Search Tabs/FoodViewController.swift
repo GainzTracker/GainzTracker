@@ -77,10 +77,10 @@ class FoodViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self?.foods.append(newFood)
             
             let currentTotalCalories = UserDefaults.standard.double(forKey: "totalCalories")
-            //let newTotalCalories = currentTotalCalories + calTotalDouble
-            //UserDefaults.standard.set(newTotalCalories, forKey: "totalCalories")
+            let newTotalCalories = currentTotalCalories + calTotalDouble
+            UserDefaults.standard.set(newTotalCalories, forKey: "totalCalories")
 
-            //UserDefaults.standard.set(calGoalDouble, forKey: "goalCalories")
+            UserDefaults.standard.set(calGoalDouble, forKey: "goalCalories")
 
             
             self?.tableView.reloadData()

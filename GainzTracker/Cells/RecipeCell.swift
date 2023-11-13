@@ -7,7 +7,6 @@
 
 import UIKit
 import Nuke
-import NukeUI
 
 
 class RecipeCell: UITableViewCell {
@@ -23,23 +22,21 @@ class RecipeCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+
         // Configure the view for the selected state
     }
     
     func configue(with recipe: Recipe) {
-        RecipeTitle.text = recipe.label
-        RecipeCalories.text = String(recipe.calories)
-        var types:String = ""
-        for type in recipe.mealType{
-            types += type
-        }
-        RecipeMeal.text = types
+        //RecipeTitle.text = recipe.label
+        //RecipeCalories.text = String(recipe.calories)
+        //RecipeMeal.text = recipe.mealType.
         
         //loading picture
-        let url:URL = URL(string: recipe.image)!
-        //Nuke.loadImage(with: url, into: RecipePicture.image)
-        //Nuke.
+        //NukeUI.loadImage(with: recipe.image, into: RecipePicture)
+        
     }
+    
+    
+    
     
 }
