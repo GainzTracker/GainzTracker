@@ -46,7 +46,7 @@ class FoodViewController: UIViewController, UITableViewDataSource, UITableViewDe
             textField.placeholder = "Number of Calories (Int)"
             textField.keyboardType = .numberPad
         }
-        
+        /*
         alert.addTextField { textField in
             textField.placeholder = "Total Calories (See Home Tab)"
             textField.keyboardType = .numberPad
@@ -55,7 +55,7 @@ class FoodViewController: UIViewController, UITableViewDataSource, UITableViewDe
             textField.placeholder = "Calorie Intake Goal (See Home Tab)"
             textField.keyboardType = .numberPad
         }
-        
+        */
         
         let addAction = UIAlertAction(title: "Add", style: .default) { [weak self] _ in
             guard let meal = alert.textFields?[0].text,
@@ -63,24 +63,28 @@ class FoodViewController: UIViewController, UITableViewDataSource, UITableViewDe
                   let numCalOne = alert.textFields?[2].text,
                   let itemTwo = alert.textFields?[3].text,
                   let numCalTwo = alert.textFields?[4].text,
-                  let calTotal = alert.textFields?[5].text,
-                  let calGoal = alert.textFields?[6].text,
+                  //let calTotal = alert.textFields?[5].text,
+                  //let calGoal = alert.textFields?[6].text,
                   let numCalOneInt = Int(numCalOne),
-                  let numCalTwoInt = Int(numCalTwo),
-                  let calTotalInt  = Int(calTotal),
-                  let calGoalInt = Int(calGoal) else {
+                  let numCalTwoInt = Int(numCalTwo)
+                  //let calTotalInt  = Int(calTotal),
+                  //let calGoalInt = Int(calGoal)
+            else {
                 return
             }
             
-            let newFood = Food(meal: meal, itemOne: itemOne, numCalOne: numCalOneInt, itemTwo: itemTwo, numCalTwo: numCalTwoInt, calTotal: calTotalInt, calGoal: calGoalInt)
+            let newFood = Food(meal: meal, itemOne: itemOne, numCalOne: numCalOneInt, itemTwo: itemTwo, numCalTwo: numCalTwoInt 
+                               //calTotal: calTotalInt,
+                               //calGoal: calGoalInt
+            )
             
             self?.foods.append(newFood)
             
             let currentTotalCalories = UserDefaults.standard.double(forKey: "totalCalories")
-            let newTotalCalories = currentTotalCalories + calTotalDouble
-            UserDefaults.standard.set(newTotalCalories, forKey: "totalCalories")
+            //let newTotalCalories = currentTotalCalories + calTotalDouble
+            //UserDefaults.standard.set(newTotalCalories, forKey: "totalCalories")
 
-            UserDefaults.standard.set(calGoalDouble, forKey: "goalCalories")
+            //UserDefaults.standard.set(calGoalDouble, forKey: "goalCalories")
 
             
             self?.tableView.reloadData()

@@ -44,6 +44,7 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
             textField.placeholder = "Weight (Double)"
             textField.keyboardType = .decimalPad
         }
+        /*
         alert.addTextField { textField in
             textField.placeholder = "Workout Time (See Home Tab)"
             textField.keyboardType = .decimalPad
@@ -52,28 +53,34 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
             textField.placeholder = "Goal Time (See Home Tab)"
             textField.keyboardType = .decimalPad
         }
+        */
+        
         let addAction = UIAlertAction(title: "Add", style: .default) { [weak self] _ in
             guard let name = alert.textFields?[0].text,
                   let sets = alert.textFields?[1].text,
                   let reps = alert.textFields?[2].text,
                   let weight = alert.textFields?[3].text,
-                  let time = alert.textFields?[4].text,
-                  let goal = alert.textFields?[5].text,
+                  //let time = alert.textFields?[4].text,
+                  //let goal = alert.textFields?[5].text,
                   let setsInt = Int(sets),
                   let repsInt = Int(reps),
-                  let weightDouble = Double(weight),
-                  let workoutTimeDouble = Double(time),
-                  let goalTimeDouble = Double(goal) else { return }
+                  let weightDouble = Double(weight)
+                  //let workoutTimeDouble = Double(time),
+                  //let goalTimeDouble = Double(goal)
+            else { return }
 
-            let newExercise = Exercise(name: name, sets: setsInt, reps: repsInt, weight: weightDouble, time: workoutTimeDouble, goal: goalTimeDouble)
+            let newExercise = Exercise(name: name, sets: setsInt, reps: repsInt, weight: weightDouble
+                                       //time: workoutTimeDouble,
+                                       //goal: goalTimeDouble
+            )
 
             self?.exercises.append(newExercise)
 
             let currentTotalTime = UserDefaults.standard.double(forKey: "totalWorkoutTime")
-            let newTotalTime = currentTotalTime + workoutTimeDouble
-            UserDefaults.standard.set(newTotalTime, forKey: "totalWorkoutTime")
+            //let newTotalTime = currentTotalTime + workoutTimeDouble
+            //UserDefaults.standard.set(newTotalTime, forKey: "totalWorkoutTime")
 
-            UserDefaults.standard.set(goalTimeDouble, forKey: "goalWorkoutTime")
+            //UserDefaults.standard.set(goalTimeDouble, forKey: "goalWorkoutTime")
 
             self?.tableView.reloadData()
         }
@@ -110,22 +117,5 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
         
         return cell
     }
-    
-    /*func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     
-     // Get a cell with identifier, "TrackCell"
-     // the `dequeueReusableCell(withIdentifier:)` method just returns a generic UITableViewCell so it's necessary to cast it to our specific custom cell.
-     let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as! RecipeCell
-     
-     // Get the track that corresponds to the table view row
-     let recipe = recipes[indexPath.row]
-     
-     // Configure the cell with it's associated track
-     cell.configue(with: recipe)
-     
-     // return the cell for display in the table view
-     return cell
-     }*/
-    
     
 }

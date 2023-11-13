@@ -138,6 +138,7 @@
 				B049010F2AEBC822001AA08A /* Cells */,
 				B04901042AEAFC8D001AA08A /* Search Tabs */,
 				C3CCF43D2AF8359D00A48E51 /* Learning Tabs */,
+				B08CD60B2AFFF0C700E40A64 /* HomeViewController.swift */,
 				C3A254CA2AE3585F00746AC4 /* Main.storyboard */,
 				C3A254CD2AE3586000746AC4 /* Assets.xcassets */,
 				C3A254CF2AE3586000746AC4 /* LaunchScreen.storyboard */,
@@ -151,7 +152,6 @@
 			children = (
 				C3CCF43E2AF85F0D00A48E51 /* RecipesViewController.swift */,
 				C3CCF4402AFB4FF500A48E51 /* RecipeDetailViewController.swift */,
-				B08CD60B2AFFF0C700E40A64 /* HomeViewController.swift */,
 			);
 			path = "Learning Tabs";
 			sourceTree = "<group>";

@@ -8,7 +8,7 @@
 import UIKit
 import Nuke
 
-class RecipesViewController: UIViewController, UITableViewDataSource {
+class RecipesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var recipes: [Recipe] = []
     
@@ -19,6 +19,7 @@ class RecipesViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         
         recipeTable.dataSource = self
+        recipeTable.delegate = self
         
         // ---- setting URL request ---
         let url = URL(string: "https://api.edamam.com/api/recipes/v2?type=public&app_id=d2d4401c&app_key=43527e7c9fe6345072214d9a750101fb&imageSize=REGULAR&random=true")!
@@ -53,10 +54,10 @@ class RecipesViewController: UIViewController, UITableViewDataSource {
                 
                 // Access the array of tracks from the `results` property
                 let hits = response.hits
-                print(hits.first)
+                print(hits.first!)
                 //let recipes = hits.Recipe as? Recipe
-                print(hits.recipe.label)
-                
+                //print(hits.recipe.label)
+                /*
                 do {
                     for hit in hits {
                         // Access the 'recipe' object within each hit
@@ -70,7 +71,7 @@ class RecipesViewController: UIViewController, UITableViewDataSource {
                     }
                 } catch {
                     print("Error deserializing JSON: \(error)")
-                }
+                }*/
             
                 //var dict = try JSONSerialization.jsonObject(with: data) as? [String: Any]
 
