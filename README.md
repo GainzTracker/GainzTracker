@@ -76,7 +76,14 @@ https://drive.google.com/drive/folders/19NWXrHAHc-VsS6--pE5gMFOzZpGIjQOU
 https://imgur.com/I4osaMC
 
 ## Schema
-[This section will be completed in Unit 9]
+<div>
+    <a href="https://www.loom.com/share/507fec3ef6c740f685e5ed016c566a77">
+      <p>Gainstrekker App: Tracking Food and Workouts - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/507fec3ef6c740f685e5ed016c566a77">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/507fec3ef6c740f685e5ed016c566a77-with-play.gif">
+    </a>
+  </div>
 
 ## Models
 1. Recipe
