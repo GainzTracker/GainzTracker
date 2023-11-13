@@ -25,6 +25,7 @@ class FoodTableViewCell: UITableViewCell {
             itemTwoLabel.text = food?.itemTwo.description ?? "ItemTwo"
             numCalOneLabel.text = food?.numCalOne.description ?? "NumberCaloriesOne"
             numCalTwoLabel.text = food?.numCalTwo.description ?? "NumberCaloriesTwo"
+            totalCalLabel.text = food?.calTotal.description ?? "CalorieTotal"
         }
     }
     

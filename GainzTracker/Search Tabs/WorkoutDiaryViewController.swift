@@ -29,22 +29,55 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
     
     @objc func addExercise() {
         let alert = UIAlertController(title: "New Exercise/Workout", message: "Enter details below", preferredStyle: .alert)
-        alert.addTextField { $0.placeholder = "Name" }
-        alert.addTextField { $0.placeholder = "Sets (Int)"; $0.keyboardType = .numberPad }
-        alert.addTextField { $0.placeholder = "Reps (Int)"; $0.keyboardType = .numberPad }
-        alert.addTextField { $0.placeholder = "Weight (Double)"; $0.keyboardType = .decimalPad }
-        
+        alert.addTextField { textField in
+            textField.placeholder = "Name"
+        }
+        alert.addTextField { textField in
+            textField.placeholder = "Sets (Int)"
+            textField.keyboardType = .numberPad
+        }
+        alert.addTextField { textField in
+            textField.placeholder = "Reps (Int)"
+            textField.keyboardType = .numberPad
+        }
+        alert.addTextField { textField in
+            textField.placeholder = "Weight (Double)"
+            textField.keyboardType = .decimalPad
+        }
+        alert.addTextField { textField in
+            textField.placeholder = "Workout Time (See Home Tab)"
+            textField.keyboardType = .decimalPad
+        }
+        alert.addTextField { textField in
+            textField.placeholder = "Goal Time (See Home Tab)"
+            textField.keyboardType = .decimalPad
+        }
         let addAction = UIAlertAction(title: "Add", style: .default) { [weak self] _ in
-            let name = alert.textFields?[0].text ?? "Default Exercise"
-            let sets = Int(alert.textFields?[1].text ?? "0") ?? 0
-            let reps = Int(alert.textFields?[2].text ?? "0") ?? 0
-            let weight = Double(alert.textFields?[3].text ?? "0.0") ?? 0.0
-            
-            let newExercise = Exercise(name: name, sets: sets, reps: reps, weight: weight)
+            guard let name = alert.textFields?[0].text,
+                  let sets = alert.textFields?[1].text,
+                  let reps = alert.textFields?[2].text,
+                  let weight = alert.textFields?[3].text,
+                  let time = alert.textFields?[4].text,
+                  let goal = alert.textFields?[5].text,
+                  let setsInt = Int(sets),
+                  let repsInt = Int(reps),
+                  let weightDouble = Double(weight),
+                  let workoutTimeDouble = Double(time),
+                  let goalTimeDouble = Double(goal) else { return }
+
+            let newExercise = Exercise(name: name, sets: setsInt, reps: repsInt, weight: weightDouble, time: workoutTimeDouble, goal: goalTimeDouble)
+
             self?.exercises.append(newExercise)
+
+            let currentTotalTime = UserDefaults.standard.double(forKey: "totalWorkoutTime")
+            let newTotalTime = currentTotalTime + workoutTimeDouble
+            UserDefaults.standard.set(newTotalTime, forKey: "totalWorkoutTime")
+
+            UserDefaults.standard.set(goalTimeDouble, forKey: "goalWorkoutTime")
+
             self?.tableView.reloadData()
         }
-        
+
         alert.addAction(addAction)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(cancelAction)
@@ -52,11 +85,11 @@ class WorkoutDiaryViewController: UIViewController, UITableViewDataSource, UITab
         present(alert, animated: true, completion: nil)
     }
     
-//    func updateTotalWorkoutTime(with minutes: Double) {
-//        let currentTotalTime = UserDefaults.standard.double(forKey: "totalWorkoutTime")
-//        let newTotalTime = currentTotalTime + minutes
-//        UserDefaults.standard.set(newTotalTime, forKey: "totalWorkoutTime")
-//    }
+    func updateTotalWorkoutTime(with minutes: Double) {
+        let currentTotalTime = UserDefaults.standard.double(forKey: "totalWorkoutTime")
+        let newTotalTime = currentTotalTime + minutes
+        UserDefaults.standard.set(newTotalTime, forKey: "totalWorkoutTime")
+    }
     
 
     func numberOfSections(in tableView: UITableView) -> Int {
