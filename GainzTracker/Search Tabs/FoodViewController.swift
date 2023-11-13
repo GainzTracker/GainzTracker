@@ -27,63 +27,29 @@ class FoodViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @objc func addMeal() {
         let alert = UIAlertController(title: "New Meal", message: "Enter details below", preferredStyle: .alert)
-        alert.addTextField { textField in
-            textField.placeholder = "Meal (String)"
-        }
-        alert.addTextField { textField in
-            textField.placeholder = "Item One (String)"
-        }
-        alert.addTextField { textField in
-            textField.placeholder = "Number of Calories (Int)"
-            textField.keyboardType = .numberPad
-        }
-        
-        alert.addTextField { textField in
-            textField.placeholder = "Item Two (String)"
-            
-        }
-        alert.addTextField { textField in
-            textField.placeholder = "Number of Calories (Int)"
-            textField.keyboardType = .numberPad
-        }
-        
-        alert.addTextField { textField in
-            textField.placeholder = "Total Calories (See Home Tab)"
-            textField.keyboardType = .numberPad
-        }
-        alert.addTextField { textField in
-            textField.placeholder = "Calorie Intake Goal (See Home Tab)"
-            textField.keyboardType = .numberPad
-        }
-        
-        
-        let addAction = UIAlertAction(title: "Add", style: .default) { [weak self] _ in
-            guard let meal = alert.textFields?[0].text,
-                  let itemOne = alert.textFields?[1].text,
-                  let numCalOne = alert.textFields?[2].text,
-                  let itemTwo = alert.textFields?[3].text,
-                  let numCalTwo = alert.textFields?[4].text,
-                  let calTotal = alert.textFields?[5].text,
-                  let calGoal = alert.textFields?[6].text,
-                  let numCalOneInt = Int(numCalOne),
-                  let numCalTwoInt = Int(numCalTwo),
-                  let calTotalInt  = Int(calTotal),
-                  let calGoalInt = Int(calGoal) else {
-                return
-            }
-            
-            let newFood = Food(meal: meal, itemOne: itemOne, numCalOne: numCalOneInt, itemTwo: itemTwo, numCalTwo: numCalTwoInt, calTotal: calTotalInt, calGoal: calGoalInt)
-            
-            self?.foods.append(newFood)
-            
-            let currentTotalCalories = UserDefaults.standard.double(forKey: "totalCalories")
-            //let newTotalCalories = currentTotalCalories + calTotalDouble
-            //UserDefaults.standard.set(newTotalCalories, forKey: "totalCalories")
+        alert.addTextField { $0.placeholder = "Meal" }
+        alert.addTextField { $0.placeholder = "Item One"; $0.keyboardType = .default }
+        alert.addTextField { $0.placeholder = "Calories for Item One"; $0.keyboardType = .numberPad }
+        alert.addTextField { $0.placeholder = "Item Two"; $0.keyboardType = .default }
+        alert.addTextField { $0.placeholder = "Calories for Item Two"; $0.keyboardType = .numberPad }
 
-            //UserDefaults.standard.set(calGoalDouble, forKey: "goalCalories")
+        let addAction = UIAlertAction(title: "Add", style: .default) { [unowned self] _ in
+            let mealName = alert.textFields?[0].text ?? "Default Meal"
+            let itemOneName = alert.textFields?[1].text ?? "Item One"
+            let itemOneCalories = Int(alert.textFields?[2].text ?? "0") ?? 0
+            let itemTwoName = alert.textFields?[3].text ?? "Item Two"
+            let itemTwoCalories = Int(alert.textFields?[4].text ?? "0") ?? 0
 
-            
-            self?.tableView.reloadData()
+            let newFood = Food(
+                meal: mealName,
+                itemOne: itemOneName,
+                numCalOne: itemOneCalories,
+                itemTwo: itemTwoName,
+                numCalTwo: itemTwoCalories
+            )
+
+            self.foods.append(newFood)
+            self.tableView.reloadData()
         }
         
         alert.addAction(addAction)
@@ -93,12 +59,12 @@ class FoodViewController: UIViewController, UITableViewDataSource, UITableViewDe
         present(alert, animated: true, completion: nil)
     }
     
-    func updateTotalCalories(with calories: Double) {
-        let currentTotalCalories = UserDefaults.standard.double(forKey: "totalCalories")
-        let newTotalCalories = currentTotalCalories + calories
-        UserDefaults.standard.set(newTotalCalories, forKey: "totalCalories")
-        
-    }
+//    func updateTotalCalories(with calories: Double) {
+//        let currentTotalCalories = UserDefaults.standard.double(forKey: "totalCalories")
+//        let newTotalCalories = currentTotalCalories + calories
+//        UserDefaults.standard.set(newTotalCalories, forKey: "totalCalories")
+//        
+//    }
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
