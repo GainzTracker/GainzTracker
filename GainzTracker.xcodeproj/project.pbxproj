@@ -21,6 +21,10 @@
 		B0B609992B00DDAE0077EC8A /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B609982B00DDAE0077EC8A /* Food.swift */; };
 		B0B6099B2B00DE830077EC8A /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B6099A2B00DE830077EC8A /* FoodTableViewCell.swift */; };
 		B0D1E01A2AF7086400E1B133 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D1E0192AF7086400E1B133 /* RecipeCell.swift */; };
+		C32230272B01616D0098268A /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = C32230262B01616D0098268A /* Nuke */; };
+		C32230292B01616D0098268A /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = C32230282B01616D0098268A /* NukeExtensions */; };
+		C322302B2B01616D0098268A /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = C322302A2B01616D0098268A /* NukeUI */; };
+		C322302D2B01616D0098268A /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = C322302C2B01616D0098268A /* NukeVideo */; };
 		C3A254C52AE3585F00746AC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C42AE3585F00746AC4 /* AppDelegate.swift */; };
 		C3A254C72AE3585F00746AC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C62AE3585F00746AC4 /* SceneDelegate.swift */; };
 		C3A254CC2AE3585F00746AC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A254CA2AE3585F00746AC4 /* Main.storyboard */; };
@@ -64,9 +68,13 @@
 			files = (
 				B04901032AEAB405001AA08A /* ParseSwift in Frameworks */,
 				B04901142AEBC8C9001AA08A /* Nuke in Frameworks */,
+				C32230292B01616D0098268A /* NukeExtensions in Frameworks */,
 				B049011A2AEBC8C9001AA08A /* NukeVideo in Frameworks */,
+				C32230272B01616D0098268A /* Nuke in Frameworks */,
 				B04901162AEBC8C9001AA08A /* NukeExtensions in Frameworks */,
 				B04901182AEBC8C9001AA08A /* NukeUI in Frameworks */,
+				C322302D2B01616D0098268A /* NukeVideo in Frameworks */,
+				C322302B2B01616D0098268A /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +186,10 @@
 				B04901152AEBC8C9001AA08A /* NukeExtensions */,
 				B04901172AEBC8C9001AA08A /* NukeUI */,
 				B04901192AEBC8C9001AA08A /* NukeVideo */,
+				C32230262B01616D0098268A /* Nuke */,
+				C32230282B01616D0098268A /* NukeExtensions */,
+				C322302A2B01616D0098268A /* NukeUI */,
+				C322302C2B01616D0098268A /* NukeVideo */,
 			);
 			productName = GainzTracker;
 			productReference = C3A254C12AE3585F00746AC4 /* GainzTracker.app */;
@@ -516,6 +528,26 @@
 			productName = NukeUI;
 		};
 		B04901192AEBC8C9001AA08A /* NukeVideo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B04901122AEBC8C9001AA08A /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeVideo;
+		};
+		C32230262B01616D0098268A /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B04901122AEBC8C9001AA08A /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		C32230282B01616D0098268A /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B04901122AEBC8C9001AA08A /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+		C322302A2B01616D0098268A /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B04901122AEBC8C9001AA08A /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+		C322302C2B01616D0098268A /* NukeVideo */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B04901122AEBC8C9001AA08A /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeVideo;

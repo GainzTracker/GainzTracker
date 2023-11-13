@@ -7,6 +7,7 @@
 
 import UIKit
 import Nuke
+import NukeUI
 
 
 class RecipeCell: UITableViewCell {
@@ -38,23 +39,7 @@ class RecipeCell: UITableViewCell {
         //loading picture
         let url:URL = URL(string: recipe.image)!
         //Nuke.loadImage(with: url, into: RecipePicture.image)
-        //RecipePicture.loadurl(url: url!)
+        //Nuke.
     }
     
-    
-    func loadurl(url: URL) {
-                DispatchQueue.global().async { [weak self] in
-                    if let data = try? Data(contentsOf: url) {
-                        if let image = UIImage(data: data) {
-                            DispatchQueue.main.async {
-                                //self?.image = image
-                            }
-                        }
-                    }
-                }
-            }
-        
-        
-    }
-    
-    
+}
