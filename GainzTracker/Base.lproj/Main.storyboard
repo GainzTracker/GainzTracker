@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6ij-5l-FNe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6ij-5l-FNe">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -444,33 +444,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DaB-G2-f3F">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DaB-G2-f3F">
+                                <rect key="frame" x="0.0" y="103" width="393" height="709"/>
+                                <color key="backgroundColor" red="0.30547671040000002" green="0.11337823819999999" blue="0.40802556820000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="separatorColor" red="0.49411764740000003" green="0.1843137443" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutCell" rowHeight="153" id="viX-AS-czX" customClass="WorkoutCell" customModule="GainzTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="153"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutCell" rowHeight="131" id="viX-AS-czX" customClass="WorkoutCell" customModule="GainzTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="viX-AS-czX" id="ETg-26-pNJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="153"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="m5k-hY-CN2">
-                                                    <rect key="frame" x="16" y="16" width="361" height="121"/>
+                                                    <rect key="frame" x="20" y="15" width="333" height="101"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dSm-gp-BVm">
-                                                            <rect key="frame" x="0.0" y="0.0" width="276.33333333333331" height="105"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="248.33333333333334" height="66.333333333333329"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Workout Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWQ-CL-gSK">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="141.66666666666666" height="65"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWQ-CL-gSK">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="141.66666666666666" height="26.333333333333332"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiA-9t-qqC">
-                                                                    <rect key="frame" x="0.0" y="81" width="43" height="24"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiA-9t-qqC">
+                                                                    <rect key="frame" x="0.0" y="42.333333333333336" width="43" height="24.000000000000007"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                                     <color key="textColor" systemColor="systemYellowColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -478,28 +477,20 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Lz-nN-KcA">
-                                                            <rect key="frame" x="292.33333333333331" y="0.0" width="68.666666666666686" height="20.333333333333332"/>
+                                                            <rect key="frame" x="264.33333333333331" y="0.0" width="68.666666666666686" height="20.333333333333332"/>
                                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                             <color key="textColor" systemColor="systemYellowColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="dSm-gp-BVm" secondAttribute="bottom" constant="16" id="8cU-AW-cc1"/>
-                                                        <constraint firstItem="dSm-gp-BVm" firstAttribute="top" secondItem="m5k-hY-CN2" secondAttribute="top" constant="16" id="fse-IF-qVh"/>
-                                                        <constraint firstItem="dSm-gp-BVm" firstAttribute="leading" secondItem="m5k-hY-CN2" secondAttribute="leading" constant="16" id="iaH-YJ-Oqe"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.69019609689999994" green="0.31764706970000001" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
-                                                <constraint firstItem="m5k-hY-CN2" firstAttribute="top" secondItem="ETg-26-pNJ" secondAttribute="top" constant="16" id="6T2-uN-cik"/>
-                                                <constraint firstAttribute="trailing" secondItem="m5k-hY-CN2" secondAttribute="trailing" constant="16" id="7mU-1O-JJg"/>
-                                                <constraint firstItem="m5k-hY-CN2" firstAttribute="leading" secondItem="ETg-26-pNJ" secondAttribute="leading" constant="16" id="Bhs-Eb-1WF"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="m5k-hY-CN2" secondAttribute="trailing" constant="16" id="IE3-1G-jT6"/>
-                                                <constraint firstAttribute="bottom" secondItem="m5k-hY-CN2" secondAttribute="bottom" constant="16" id="R8b-6G-vDb"/>
-                                                <constraint firstItem="m5k-hY-CN2" firstAttribute="leading" secondItem="ETg-26-pNJ" secondAttribute="leadingMargin" constant="16" id="itR-w2-rzM"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="m5k-hY-CN2" secondAttribute="bottom" constant="16" id="rPo-Iv-KVI"/>
+                                                <constraint firstItem="m5k-hY-CN2" firstAttribute="leading" secondItem="ETg-26-pNJ" secondAttribute="leading" constant="20" id="Bhs-Eb-1WF"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="m5k-hY-CN2" secondAttribute="trailing" constant="20" id="IE3-1G-jT6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="m5k-hY-CN2" secondAttribute="bottom" constant="4" id="ePu-K5-KTM"/>
+                                                <constraint firstItem="m5k-hY-CN2" firstAttribute="top" secondItem="ETg-26-pNJ" secondAttribute="topMargin" constant="4" id="hiW-Dl-GeC"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -514,6 +505,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fkk-a8-2hS"/>
                         <color key="backgroundColor" red="0.30547671040000002" green="0.11337823819999999" blue="0.40802556820000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="DaB-G2-f3F" secondAttribute="bottom" constant="40" id="4vI-AS-FB5"/>
+                            <constraint firstItem="DaB-G2-f3F" firstAttribute="top" secondItem="owl-4X-hbf" secondAttribute="top" constant="103" id="SpO-92-NWk"/>
+                            <constraint firstItem="DaB-G2-f3F" firstAttribute="leading" secondItem="owl-4X-hbf" secondAttribute="leading" id="bAY-2y-m2a"/>
+                            <constraint firstAttribute="trailing" secondItem="DaB-G2-f3F" secondAttribute="trailing" id="lrh-wD-sXl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Workouts" id="3iG-5d-vix"/>
                     <connections>
@@ -747,7 +744,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="weB-Ae-U6P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3608.3969465648852" y="3106.3380281690143"/>
+            <point key="canvasLocation" x="3531" y="3101"/>
         </scene>
         <!--Workout Diary-->
         <scene sceneID="9d7-mL-eaU">
@@ -866,7 +863,6 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Taz-Ip-vIT" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="h1t-7I-XsR"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kRG-jH-q9V">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1111,7 +1107,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0l4-TB-PUE"/>
+        <segue reference="nzO-Uk-pO8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="checklist" catalog="system" width="128" height="107"/>
@@ -1128,7 +1124,7 @@
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
