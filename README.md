@@ -76,7 +76,7 @@ https://drive.google.com/drive/folders/19NWXrHAHc-VsS6--pE5gMFOzZpGIjQOU
 https://imgur.com/I4osaMC
 
 ## Schema
-(https://www.loom.com/share/507fec3ef6c740f685e5ed016c566a77?sid=c959572f-4ab7-4f02-bd9e-35148437ec73)
+https://www.loom.com/share/507fec3ef6c740f685e5ed016c566a77?sid=c959572f-4ab7-4f02-bd9e-35148437ec73
 
 ## Final Product
 <div>
