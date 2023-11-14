@@ -78,6 +78,16 @@ https://imgur.com/I4osaMC
 ## Schema
 [This section will be completed in Unit 9]
 
+## Final Product
+<div>
+    <a href="https://www.loom.com/share/c85eec9eb4834a279b71d6525741073f">
+      <p>Simulator - iPhone 15 Pro - 13 November 2023 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/c85eec9eb4834a279b71d6525741073f">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/c85eec9eb4834a279b71d6525741073f-with-play.gif">
+    </a>
+  </div>
+
 ## Models
 1. Recipe
 2. News
