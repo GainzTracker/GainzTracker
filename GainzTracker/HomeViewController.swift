@@ -18,28 +18,27 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var goalTimeLabel: UILabel!
     
+    static let averageDailyCalories: Double = 2000
+    static let averageWorkoutTime: Double = 45
+    static let goalWorkoutTime: Double = 60
+    static let goalCalorieIntake: Double = 2500
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Initial setup if needed
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let currentTotalTime = UserDefaults.standard.double(forKey: "totalWorkoutTime")
-        let goalTime = UserDefaults.standard.double(forKey: "goalWorkoutTime")
-        let currentTotalCalories = UserDefaults.standard.double(forKey: "totalCalories")
-        let goalCalories = UserDefaults.standard.double(forKey: "goalCalories")
-
-        updateWorkoutProgressBar(with: currentTotalTime, goal: goalTime)
-        updateCalorieProgressBar(with: currentTotalCalories, goal: goalCalories)
-
-        currentTimeLabel.text = "\(Int(currentTotalTime)) mins"
-        goalTimeLabel.text = "\(Int(goalTime)) mins"
-
-        currentCalLabel.text = "\(Int(currentTotalCalories)) Cal"
-        goalCalLabel.text = "\(Int(goalCalories)) Cal"
+        updateCalorieProgressBar(with: HomeViewController.averageDailyCalories, goal: HomeViewController.goalCalorieIntake)
+        updateWorkoutProgressBar(with: HomeViewController.averageWorkoutTime, goal: HomeViewController.goalWorkoutTime)
+        
+        currentCalLabel.text = "\(Int(HomeViewController.averageDailyCalories)) cal"
+        goalCalLabel.text = "\(Int(HomeViewController.goalCalorieIntake)) cal"
+        currentTimeLabel.text = "\(Int(HomeViewController.averageWorkoutTime)) mins"
+        goalTimeLabel.text = "\(Int(HomeViewController.goalWorkoutTime)) mins"
     }
+    
 
     func updateWorkoutProgressBar(with currentTime: Double, goal: Double) {
         let progress = Float(currentTime / goal)
