@@ -25,6 +25,7 @@
 		B0B609992B00DDAE0077EC8A /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B609982B00DDAE0077EC8A /* Food.swift */; };
 		B0B6099B2B00DE830077EC8A /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B6099A2B00DE830077EC8A /* FoodTableViewCell.swift */; };
 		B0D1E01A2AF7086400E1B133 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D1E0192AF7086400E1B133 /* RecipeCell.swift */; };
+		B0DAE40A2B032B4D00743F17 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DAE4092B032B4D00743F17 /* ProfileViewController.swift */; };
 		C3A254C52AE3585F00746AC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C42AE3585F00746AC4 /* AppDelegate.swift */; };
 		C3A254C72AE3585F00746AC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A254C62AE3585F00746AC4 /* SceneDelegate.swift */; };
 		C3A254CC2AE3585F00746AC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A254CA2AE3585F00746AC4 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		B0B609982B00DDAE0077EC8A /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		B0B6099A2B00DE830077EC8A /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		B0D1E0192AF7086400E1B133 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		B0DAE4092B032B4D00743F17 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C3A254C12AE3585F00746AC4 /* GainzTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GainzTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A254C42AE3585F00746AC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3A254C62AE3585F00746AC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				C3CCF4402AFB4FF500A48E51 /* RecipeDetailViewController.swift */,
 				9F0D035F2B02EBF100CCF82B /* WorkoutViewController.swift */,
 				9F0D03632B02F17500CCF82B /* WorkoutDetailViewController.swift */,
+				B0DAE4092B032B4D00743F17 /* ProfileViewController.swift */,
 			);
 			path = "Learning Tabs";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				9F0D03642B02F17500CCF82B /* WorkoutDetailViewController.swift in Sources */,
 				B0B6099B2B00DE830077EC8A /* FoodTableViewCell.swift in Sources */,
 				C3CCF4412AFB4FF500A48E51 /* RecipeDetailViewController.swift in Sources */,
+				B0DAE40A2B032B4D00743F17 /* ProfileViewController.swift in Sources */,
 				9F0D035E2B02EAB300CCF82B /* Workout.swift in Sources */,
 				B0D1E01A2AF7086400E1B133 /* RecipeCell.swift in Sources */,
 			);

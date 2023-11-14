@@ -14,9 +14,6 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var heightField: UIStepper!
-    @IBOutlet weak var weightField: UIStepper!
-    @IBOutlet weak var weightGoalField: UIStepper!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,15 +25,9 @@ class SignUpViewController: UIViewController {
         guard let username = usernameField.text,
               let email = emailField.text,
               let password = passwordField.text,
-              let height : Double? = heightField.stepValue,
-              let weight : Double? = weightField.value,
-              let weightGoal : Double? = weightGoalField.value,
               !username.isEmpty,
               !email.isEmpty,
-              !password.isEmpty,
-              !height!.isZero,
-              !weight!.isZero,
-              !weightGoal!.isZero else {
+              !password.isEmpty else {
 
             showMissingFieldsAlert()
             return
