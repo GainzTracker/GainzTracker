@@ -54,16 +54,14 @@ Diary-like app usable for tracking food and workouts done on a day.
 
 **Flow Navigation (Screen to Screen)**
 
-* Login Screen
-=> Home
-=> Navigate to a detailed article view
-* Registration Screen
-=> Home
-* Stream Screen
-=> Navigatate to a detailed screen to see article
-* Search Screen
-=> List of matched items
-=> Click each item for more detail
+* Login Screen / Sign Up Screen
+=> Home (middle tab)
+* Diary Tabs (2 tabs on the left)
+=> Workout Diary
+=> Food Diary
+* Learning Tabs (2 tabs on the right)
+=> Recipe Finder
+=> Workout Finder
 
 ## Wireframes
 ![](https://hackmd.io/_uploads/BJR9C8uG6.jpg)
@@ -76,7 +74,7 @@ https://drive.google.com/drive/folders/19NWXrHAHc-VsS6--pE5gMFOzZpGIjQOU
 https://imgur.com/I4osaMC
 
 ## Schema
-https://www.loom.com/share/507fec3ef6c740f685e5ed016c566a77?sid=c959572f-4ab7-4f02-bd9e-35148437ec73
+[This section will be completed in Unit 9]
 
 ## Final Product
 <div>
@@ -89,10 +87,10 @@ https://www.loom.com/share/507fec3ef6c740f685e5ed016c566a77?sid=c959572f-4ab7-4f
   </div>
 
 ## Models
-1. Recipe
-2. News
+1. Recipes
+2. Meals
 3. Exercise
-4. Meals
+4. Workouts
 
 ## Networking
 * Back4App - Stores user data
