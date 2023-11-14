@@ -29,10 +29,10 @@ Diary-like app usable for tracking food and workouts done on a day.
 
 **Optional Nice-to-have Stories**
 
-* A login and password
-* Long list of articles
-* A tracker for calories and workouts
-* Data is stored for the user
+* A login and password - ✅
+* Long list of articles - ✅
+* A tracker for calories and workouts - ✅
+* Data is stored for the user - ✅
 
 ### **2. Screen Archetypes**
 * Login 
