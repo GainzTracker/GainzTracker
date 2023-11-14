@@ -12,7 +12,6 @@ class RecipesViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var recipes: [Recipe] = []
     
-    
     @IBOutlet weak var recipeTable: UITableView!
     
     override func viewDidLoad() {
@@ -53,27 +52,10 @@ class RecipesViewController: UIViewController, UITableViewDataSource, UITableVie
 
                 
                 // Access the array of tracks from the `results` property
-                let hits = response.hits
-                print(hits.first!)
+                let recipes = response.hits
+                print(recipes.first!)
                 //let recipes = hits.Recipe as? Recipe
-                //print(hits.recipe.label)
-                /*
-                do {
-                    for hit in hits {
-                        // Access the 'recipe' object within each hit
-                        if let recipes = hits[hit] as? Recipe {
-                            // Access the 'calories' value within each recipe
-                            if let calories = recipes.recipe["calories"] as? Double {
-                                // Print or use the calories value as needed
-                                print(calories)
-                            }
-                        }
-                    }
-                } catch {
-                    print("Error deserializing JSON: \(error)")
-                }*/
-            
-                //var dict = try JSONSerialization.jsonObject(with: data) as? [String: Any]
+                //print(recipes.first.label)
 
                 print("✅ recipes are here")
                 
@@ -112,6 +94,8 @@ class RecipesViewController: UIViewController, UITableViewDataSource, UITableVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // TODO: set look in detail for recipe                        <------ here!!!!
         
+        print("configure")
+
         // Get the cell that triggered the segue
         if let cell = sender as? UITableViewCell,
            // Get the index path of the cell from the table view
