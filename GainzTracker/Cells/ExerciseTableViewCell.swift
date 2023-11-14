@@ -33,41 +33,4 @@ class ExerciseTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-//    // MARK: - UITextFieldDelegate
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        //guard let exercise = exercise else { return }
-//        /*
-//        if textField == nameTextField {
-//            self.exercise?.name = textField.text ?? ""
-//        } else if textField == setsTextField {
-//            self.exercise?.sets = Int(textField.text ?? "") ?? 0
-//        } else if textField == repsTextField {
-//            self.exercise?.reps = Int(textField.text ?? "") ?? 0
-//        } else if textField == weightTextField {
-//            self.exercise?.weight = Double(textField.text ?? "") ?? 0.0
-//        }*/
-//        print("hey")
-//        /*if textField == nameTextField {
-//            self.exercise?.name = textField.text ?? ""
-//        } else if textField == setsTextField {
-//            self.exercise?.sets = Int(textField.text ?? "") ?? 0
-//        } else if textField == repsTextField {
-//            self.exercise?.reps = Int(textField.text ?? "") ?? 0
-//        } else if textField == weightTextField {
-//            self.exercise?.weight = Double(textField.text ?? "") ?? 0.0
-//        }*/
-//
-//        onExerciseUpdated?(exercise!)
-//    }
-//    
-//    func configue(with exercise: Exercise) {
-//        nameTextField.text = exercise.name
-//        setsTextField.text = String(exercise.sets)
-//        repsTextField.text = String(exercise.reps)
-//        weightTextField.text = String(exercise.weight)
-//        
-//        //loading picture
-//        //NukeUI.loadImage(with: recipe.image, into: RecipePicture)
-//        
-//    }
 }

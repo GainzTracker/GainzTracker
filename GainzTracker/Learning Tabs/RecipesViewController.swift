@@ -44,16 +44,30 @@ class RecipesViewController: UIViewController, UITableViewDataSource, UITableVie
                 // Create a JSON Decoder
                 let decoder = JSONDecoder()
 
-                print("here")
-                // Use the JSON decoder to try and map the data to our custom model.
-                // TrackResponse.self is a reference to the type itself, tells the decoder what to map to.
+                // RecipeResponse.self is a reference to the type itself, tells the decoder what to map to.
                 let response = try decoder.decode(RecipesResponse.self, from: data)
-                print("here x2")
 
                 
                 // Access the array of tracks from the `results` property
-                let recipes = response.hits
-                print(recipes.first!)
+                var hits = response.hits
+                
+                var recipe: Recipe
+                //var popping: Recipe
+                var ind: Int = 19
+                
+                while(ind >= 0){
+                    recipe = hits[ind].recipe
+                    print(recipe.label)
+
+                    self!.recipes.append(_:recipe)
+                    //hits.popLast()
+                    ind -= 1
+                }
+                
+                print(self!.recipes.count)
+                
+                print(self!.recipes.first!)
+                
                 //let recipes = hits.Recipe as? Recipe
                 //print(recipes.first.label)
 
@@ -63,7 +77,7 @@ class RecipesViewController: UIViewController, UITableViewDataSource, UITableVie
                 DispatchQueue.main.async {
 
                     // Set the view controller's tracks property as this is the one the table view references
-                    //self?.recipes = recipes
+                    self?.recipes = self!.recipes
 
                     // Make the table view reload now that we have new data
                     self?.recipeTable.reloadData()
