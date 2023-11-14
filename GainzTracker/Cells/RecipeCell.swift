@@ -45,7 +45,4 @@ class RecipeCell: UITableViewCell {
         
     }
     
-    
-    
-    
 }
